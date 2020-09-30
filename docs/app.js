@@ -1133,7 +1133,9 @@
                     (this.winningOrLose = !1),
                     (this.progress = 1),
                     (this.showProgress = !1),
-                    (this.socket = p.connect('http://localhost:3001/'));
+                    (this.socket = p.connect(
+                        'https://rohitmuz12.github.io/tic-tac-toe-lwc-oss/'
+                    ));
             }
             renderedCallback() {
                 this.renderComplete ||

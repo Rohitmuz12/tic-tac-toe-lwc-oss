@@ -23,7 +23,10 @@ export default class TicTacToe extends LightningElement {
     winningOrLose = false;
     progress = 1;
     showProgress = false;
-    socket = socketIo.connect('http://localhost:3001/');
+    // socket = socketIo.connect('http://localhost:3001/');
+    socket = socketIo.connect(
+        'https://rohitmuz12.github.io/tic-tac-toe-lwc-oss/'
+    );
 
     renderedCallback() {
         if (!this.renderComplete) {
