@@ -7,7 +7,7 @@ module.exports = {
 
         {
             from: 'node_modules/@salesforce-ux/design-system/assets',
-            to: 'src/SLDS'
+            to: 'docs/SLDS'
         },
         {
             from: 'node_modules/@salesforce-ux/design-system/assets',
