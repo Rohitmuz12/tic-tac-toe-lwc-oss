@@ -25,7 +25,7 @@ export default class Game extends LightningElement {
     showProgress = false;
     // socket = socketIo.connect('http://localhost:3001/');
     socket = socketIo.connect(
-        'https://rohitmuz12.github.io/tic-tac-toe-lwc-oss/'
+        'https://tic-tac-toe-lwc-oss.herokuapp.com/'
     );
 
     renderedCallback() {
