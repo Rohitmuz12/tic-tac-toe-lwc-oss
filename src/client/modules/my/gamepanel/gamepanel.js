@@ -7,7 +7,7 @@ import { LightningElement, api } from 'lwc';
 // import publishJoinGame from '@salesforce/apex/PublishTicTacToeGameEvent.joinGame';
 
 //Author Rasmit Kumar
-export default class TicTacToePanel extends LightningElement {
+export default class Gamepanel extends LightningElement {
     @api selectedChannel;
     isNoActiveGame = true;
     isCreateGame = false;

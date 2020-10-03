@@ -5,7 +5,7 @@ import * as socketIo from 'socket.io-client';
 // import publishJoinConfirmationFromApex from '@salesforce/apex/PublishTicTacToeGameEvent.sendJoinConfirmation';
 // import playMoveForReciver from '@salesforce/apex/PublishTicTacToeGameEvent.playMove';
 
-export default class TicTacToe extends LightningElement {
+export default class Game extends LightningElement {
     @track gameBlock = [];
     renderComplete = false;
     activeGame = false;

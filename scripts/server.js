@@ -12,7 +12,7 @@ app.use(compression());
 
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
-const DIST_DIR = './dist';
+const DIST_DIR = './docs';
 
 const http = require('http');
 const server = http.Server(app);
