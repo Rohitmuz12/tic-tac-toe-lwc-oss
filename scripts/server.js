@@ -14,7 +14,7 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
 const DIST_DIR = './docs';
 
-const http = require('http');
+const http = require('https');
 const server = http.Server(app);
 const socketIo = require('socket.io');
 
