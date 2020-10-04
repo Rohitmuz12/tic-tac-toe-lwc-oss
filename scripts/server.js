@@ -33,7 +33,7 @@ server.listen(PORT, () => {
     console.log(server);
 });
 
-const io = socketIo(server);
+const io = socketIo.listen(server);
 
 io.on('connection', (socket) => {
     socket.on('create room', () => {
