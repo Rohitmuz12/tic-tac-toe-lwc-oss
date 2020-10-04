@@ -72,6 +72,6 @@
         "watch": "run-p watch:client watch:server",
         "watch:client": "lwc-services watch",
         "watch:server": "nodemon",
-        "start": "node index.js"
+        "start": "serve -s build"
     }
 }
