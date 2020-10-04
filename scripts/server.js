@@ -20,6 +20,14 @@ const socketIo = require('socket.io');
 
 app.use(express.static(DIST_DIR));
 
+app.use(function (req, res, next) {
+    res.setHeader(
+        'Content-Security-Policy',
+        "script-src 'self' 'unsafe-inline'"
+    );
+    return next();
+});
+
 // app.use('/', (req, res) => {
 //     res.sendFile(path.resolve(DIST_DIR, 'index.html'));
 // });
