@@ -23,7 +23,9 @@ app.use(express.static(DIST_DIR));
 app.use(function (req, res, next) {
     res.setHeader(
         'Content-Security-Policy',
-        "script-src 'self' 'unsafe-inline'"
+        "script-src 'self' 'unsafe-inline'",
+        "default-src 'self'",
+        'http://localhost:3001'
     );
     return next();
 });
