@@ -24,9 +24,7 @@ export default class Game extends LightningElement {
     progress = 1;
     showProgress = false;
     // socket = socketIo.connect('http://localhost:3001/');
-    socket = socketIo.connect(
-        'https://tic-tac-toe-lwc-oss.herokuapp.com/'
-    );
+    socket = socketIo.connect('https://tic-tac-toe-lwc-oss.herokuapp.com/');
 
     renderedCallback() {
         if (!this.renderComplete) {
@@ -76,9 +74,7 @@ export default class Game extends LightningElement {
 
         //From player to create room
         this.socket.on('get roomId', (roomId) => {
-            this.template
-                .querySelector('my-ticTacToePanel')
-                .waitForPlayer(roomId);
+            this.template.querySelector('my-gamepanel').waitForPlayer(roomId);
             this.senderGameId = roomId;
         });
 
