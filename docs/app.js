@@ -1,45 +1,45 @@
 !(function (e) {
     function t(t) {
         for (
-            var a, o, r = t[0], l = t[1], c = t[2], m = 0, p = [];
-            m < r.length;
+            var a, i, l = t[0], r = t[1], c = t[2], m = 0, p = [];
+            m < l.length;
             m++
         )
-            (o = r[m]),
-                Object.prototype.hasOwnProperty.call(n, o) &&
-                    n[o] &&
-                    p.push(n[o][0]),
-                (n[o] = 0);
-        for (a in l)
-            Object.prototype.hasOwnProperty.call(l, a) && (e[a] = l[a]);
+            (i = l[m]),
+                Object.prototype.hasOwnProperty.call(n, i) &&
+                    n[i] &&
+                    p.push(n[i][0]),
+                (n[i] = 0);
+        for (a in r)
+            Object.prototype.hasOwnProperty.call(r, a) && (e[a] = r[a]);
         for (d && d(t); p.length; ) p.shift()();
-        return i.push.apply(i, c || []), s();
+        return o.push.apply(o, c || []), s();
     }
     function s() {
-        for (var e, t = 0; t < i.length; t++) {
-            for (var s = i[t], a = !0, r = 1; r < s.length; r++) {
-                var l = s[r];
-                0 !== n[l] && (a = !1);
+        for (var e, t = 0; t < o.length; t++) {
+            for (var s = o[t], a = !0, l = 1; l < s.length; l++) {
+                var r = s[l];
+                0 !== n[r] && (a = !1);
             }
-            a && (i.splice(t--, 1), (e = o((o.s = s[0]))));
+            a && (o.splice(t--, 1), (e = i((i.s = s[0]))));
         }
         return e;
     }
     var a = {},
         n = { 1: 0 },
-        i = [];
-    function o(t) {
+        o = [];
+    function i(t) {
         if (a[t]) return a[t].exports;
         var s = (a[t] = { i: t, l: !1, exports: {} });
-        return e[t].call(s.exports, s, s.exports, o), (s.l = !0), s.exports;
+        return e[t].call(s.exports, s, s.exports, i), (s.l = !0), s.exports;
     }
-    (o.m = e),
-        (o.c = a),
-        (o.d = function (e, t, s) {
-            o.o(e, t) ||
+    (i.m = e),
+        (i.c = a),
+        (i.d = function (e, t, s) {
+            i.o(e, t) ||
                 Object.defineProperty(e, t, { enumerable: !0, get: s });
         }),
-        (o.r = function (e) {
+        (i.r = function (e) {
             'undefined' != typeof Symbol &&
                 Symbol.toStringTag &&
                 Object.defineProperty(e, Symbol.toStringTag, {
@@ -47,12 +47,12 @@
                 }),
                 Object.defineProperty(e, '__esModule', { value: !0 });
         }),
-        (o.t = function (e, t) {
-            if ((1 & t && (e = o(e)), 8 & t)) return e;
+        (i.t = function (e, t) {
+            if ((1 & t && (e = i(e)), 8 & t)) return e;
             if (4 & t && 'object' == typeof e && e && e.__esModule) return e;
             var s = Object.create(null);
             if (
-                (o.r(s),
+                (i.r(s),
                 Object.defineProperty(s, 'default', {
                     enumerable: !0,
                     value: e
@@ -60,7 +60,7 @@
                 2 & t && 'string' != typeof e)
             )
                 for (var a in e)
-                    o.d(
+                    i.d(
                         s,
                         a,
                         function (t) {
@@ -69,7 +69,7 @@
                     );
             return s;
         }),
-        (o.n = function (e) {
+        (i.n = function (e) {
             var t =
                 e && e.__esModule
                     ? function () {
@@ -78,18 +78,18 @@
                     : function () {
                           return e;
                       };
-            return o.d(t, 'a', t), t;
+            return i.d(t, 'a', t), t;
         }),
-        (o.o = function (e, t) {
+        (i.o = function (e, t) {
             return Object.prototype.hasOwnProperty.call(e, t);
         }),
-        (o.p = './');
-    var r = (window.webpackJsonp = window.webpackJsonp || []),
-        l = r.push.bind(r);
-    (r.push = t), (r = r.slice());
-    for (var c = 0; c < r.length; c++) t(r[c]);
-    var d = l;
-    i.push([28, 0, 2]), s();
+        (i.p = './');
+    var l = (window.webpackJsonp = window.webpackJsonp || []),
+        r = l.push.bind(l);
+    (l.push = t), (l = l.slice());
+    for (var c = 0; c < l.length; c++) t(l[c]);
+    var d = r;
+    o.push([28, 0, 2]), s();
 })({
     28: function (e, t, s) {
         e.exports = s(58);
@@ -121,7 +121,7 @@
                 ].join('');
             }
         ];
-        var i = [
+        var o = [
             function (e, t, s) {
                 return [
                     '.header',
@@ -156,7 +156,7 @@
                 ].join('');
             }
         ];
-        var o = [
+        var i = [
             function (e, t, s) {
                 return [
                     '.textInput',
@@ -167,8 +167,8 @@
                 ].join('');
             }
         ];
-        function r(e, t, s, a) {
-            const { t: n, b: i, h: o, gid: r, d: l } = e,
+        function l(e, t, s, a) {
+            const { t: n, b: o, h: i, gid: l, d: r } = e,
                 {
                     _m0: c,
                     _m1: d,
@@ -187,19 +187,19 @@
                     _m14: w
                 } = a;
             return [
-                o(
+                i(
                     'div',
                     {
                         classMap: {
                             'slds-m-top_small': !0,
                             'slds-m-bottom_medium': !0
                         },
-                        key: 48
+                        key: 45
                     },
                     [
                         t.isNoActiveGame
-                            ? o('div', { key: 2 }, [
-                                  o(
+                            ? i('div', { key: 2 }, [
+                                  i(
                                       'button',
                                       {
                                           classMap: {
@@ -214,12 +214,12 @@
                                           key: 0,
                                           on: {
                                               click:
-                                                  c || (a._m0 = i(t.createGame))
+                                                  c || (a._m0 = o(t.createGame))
                                           }
                                       },
                                       [n('Create game')]
                                   ),
-                                  o(
+                                  i(
                                       'button',
                                       {
                                           classMap: {
@@ -230,7 +230,7 @@
                                           key: 1,
                                           on: {
                                               click:
-                                                  d || (a._m1 = i(t.joinAGame))
+                                                  d || (a._m1 = o(t.joinAGame))
                                           }
                                       },
                                       [n('Join game')]
@@ -238,8 +238,8 @@
                               ])
                             : null,
                         t.isCreateGame
-                            ? o('div', { key: 28 }, [
-                                  o(
+                            ? i('div', { key: 27 }, [
+                                  i(
                                       'radiogroup',
                                       {
                                           classMap: {
@@ -256,14 +256,14 @@
                                           on: {
                                               change:
                                                   m ||
-                                                  (a._m2 = i(
+                                                  (a._m2 = o(
                                                       t.handleChannelOnchange
                                                   ))
                                           }
                                       },
                                       []
                                   ),
-                                  o(
+                                  i(
                                       'fieldset',
                                       {
                                           classMap: {
@@ -273,7 +273,7 @@
                                           key: 16
                                       },
                                       [
-                                          o(
+                                          i(
                                               'legend',
                                               {
                                                   classMap: {
@@ -284,7 +284,7 @@
                                               },
                                               [n('Choose game type')]
                                           ),
-                                          o(
+                                          i(
                                               'div',
                                               {
                                                   classMap: {
@@ -293,7 +293,7 @@
                                                   key: 15
                                               },
                                               [
-                                                  o(
+                                                  i(
                                                       'span',
                                                       {
                                                           classMap: {
@@ -302,13 +302,13 @@
                                                           key: 9
                                                       },
                                                       [
-                                                          o(
+                                                          i(
                                                               'input',
                                                               {
                                                                   attrs: {
                                                                       type:
                                                                           'radio',
-                                                                      id: r(
+                                                                      id: l(
                                                                           'radio-43'
                                                                       ),
                                                                       name:
@@ -322,14 +322,14 @@
                                                                   on: {
                                                                       change:
                                                                           p ||
-                                                                          (a._m3 = i(
+                                                                          (a._m3 = o(
                                                                               t.handleChannelOnchange
                                                                           ))
                                                                   }
                                                               },
                                                               []
                                                           ),
-                                                          o(
+                                                          i(
                                                               'label',
                                                               {
                                                                   classMap: {
@@ -338,14 +338,14 @@
                                                                   attrs: {
                                                                       for:
                                                                           '' +
-                                                                          r(
+                                                                          l(
                                                                               'radio-43'
                                                                           )
                                                                   },
                                                                   key: 8
                                                               },
                                                               [
-                                                                  o(
+                                                                  i(
                                                                       'span',
                                                                       {
                                                                           classMap: {
@@ -355,7 +355,7 @@
                                                                       },
                                                                       []
                                                                   ),
-                                                                  o(
+                                                                  i(
                                                                       'span',
                                                                       {
                                                                           classMap: {
@@ -373,7 +373,7 @@
                                                           )
                                                       ]
                                                   ),
-                                                  o(
+                                                  i(
                                                       'span',
                                                       {
                                                           classMap: {
@@ -382,13 +382,13 @@
                                                           key: 14
                                                       },
                                                       [
-                                                          o(
+                                                          i(
                                                               'input',
                                                               {
                                                                   attrs: {
                                                                       type:
                                                                           'radio',
-                                                                      id: r(
+                                                                      id: l(
                                                                           'radio-44'
                                                                       ),
                                                                       name:
@@ -402,14 +402,14 @@
                                                                   on: {
                                                                       change:
                                                                           h ||
-                                                                          (a._m4 = i(
+                                                                          (a._m4 = o(
                                                                               t.handleChannelOnchange
                                                                           ))
                                                                   }
                                                               },
                                                               []
                                                           ),
-                                                          o(
+                                                          i(
                                                               'label',
                                                               {
                                                                   classMap: {
@@ -418,14 +418,14 @@
                                                                   attrs: {
                                                                       for:
                                                                           '' +
-                                                                          r(
+                                                                          l(
                                                                               'radio-44'
                                                                           )
                                                                   },
                                                                   key: 13
                                                               },
                                                               [
-                                                                  o(
+                                                                  i(
                                                                       'span',
                                                                       {
                                                                           classMap: {
@@ -435,7 +435,7 @@
                                                                       },
                                                                       []
                                                                   ),
-                                                                  o(
+                                                                  i(
                                                                       'span',
                                                                       {
                                                                           classMap: {
@@ -457,14 +457,14 @@
                                           )
                                       ]
                                   ),
-                                  o(
+                                  i(
                                       'div',
                                       {
                                           classMap: { 'slds-form-element': !0 },
-                                          key: 21
+                                          key: 20
                                       },
                                       [
-                                          o(
+                                          i(
                                               'label',
                                               {
                                                   classMap: {
@@ -473,37 +473,22 @@
                                                   attrs: {
                                                       for:
                                                           '' +
-                                                          r('text-input-id-1')
+                                                          l('text-input-id-1')
                                                   },
-                                                  key: 18
+                                                  key: 17
                                               },
-                                              [
-                                                  o(
-                                                      'abbr',
-                                                      {
-                                                          classMap: {
-                                                              'slds-required': !0
-                                                          },
-                                                          attrs: {
-                                                              title: 'required'
-                                                          },
-                                                          key: 17
-                                                      },
-                                                      [n('* ')]
-                                                  ),
-                                                  n('Your name')
-                                              ]
+                                              [n('Your name')]
                                           ),
-                                          o(
+                                          i(
                                               'div',
                                               {
                                                   classMap: {
                                                       'slds-form-element__control': !0
                                                   },
-                                                  key: 20
+                                                  key: 19
                                               },
                                               [
-                                                  o(
+                                                  i(
                                                       'input',
                                                       {
                                                           classMap: {
@@ -512,20 +497,20 @@
                                                           },
                                                           attrs: {
                                                               type: 'text',
-                                                              id: r(
+                                                              id: l(
                                                                   'text-input-id-1'
                                                               )
                                                           },
-                                                          key: 19,
+                                                          key: 18,
                                                           on: {
                                                               keyup:
                                                                   g ||
-                                                                  (a._m5 = i(
+                                                                  (a._m5 = o(
                                                                       t.handlePlayerName
                                                                   )),
                                                               change:
                                                                   u ||
-                                                                  (a._m6 = i(
+                                                                  (a._m6 = o(
                                                                       t.handlePlayerName
                                                                   ))
                                                           }
@@ -537,16 +522,16 @@
                                       ]
                                   ),
                                   t.offLine
-                                      ? o(
+                                      ? i(
                                             'div',
                                             {
                                                 classMap: {
                                                     'slds-form-element': !0
                                                 },
-                                                key: 26
+                                                key: 25
                                             },
                                             [
-                                                o(
+                                                i(
                                                     'label',
                                                     {
                                                         classMap: {
@@ -555,14 +540,14 @@
                                                         attrs: {
                                                             for:
                                                                 '' +
-                                                                r(
-                                                                    'text-input-id-1'
+                                                                l(
+                                                                    'text-input-id-2'
                                                                 )
                                                         },
-                                                        key: 23
+                                                        key: 22
                                                     },
                                                     [
-                                                        o(
+                                                        i(
                                                             'abbr',
                                                             {
                                                                 classMap: {
@@ -572,23 +557,23 @@
                                                                     title:
                                                                         'required'
                                                                 },
-                                                                key: 22
+                                                                key: 21
                                                             },
                                                             [n('* ')]
                                                         ),
                                                         n('Opponent name')
                                                     ]
                                                 ),
-                                                o(
+                                                i(
                                                     'div',
                                                     {
                                                         classMap: {
                                                             'slds-form-element__control': !0
                                                         },
-                                                        key: 25
+                                                        key: 24
                                                     },
                                                     [
-                                                        o(
+                                                        i(
                                                             'input',
                                                             {
                                                                 classMap: {
@@ -598,20 +583,20 @@
                                                                 attrs: {
                                                                     type:
                                                                         'text',
-                                                                    id: r(
+                                                                    id: l(
                                                                         'text-input-id-2'
                                                                     )
                                                                 },
-                                                                key: 24,
+                                                                key: 23,
                                                                 on: {
                                                                     keyup:
                                                                         y ||
-                                                                        (a._m7 = i(
+                                                                        (a._m7 = o(
                                                                             t.handleOpponentName
                                                                         )),
                                                                     change:
                                                                         v ||
-                                                                        (a._m8 = i(
+                                                                        (a._m8 = o(
                                                                             t.handleOpponentName
                                                                         ))
                                                                 }
@@ -623,7 +608,7 @@
                                             ]
                                         )
                                       : null,
-                                  o(
+                                  i(
                                       'button',
                                       {
                                           classMap: {
@@ -631,10 +616,10 @@
                                               'slds-button_brand': !0,
                                               'slds-var-m-top_medium': !0
                                           },
-                                          key: 27,
+                                          key: 26,
                                           on: {
                                               click:
-                                                  f || (a._m9 = i(t.startGame))
+                                                  f || (a._m9 = o(t.startGame))
                                           }
                                       },
                                       [n('Start Game')]
@@ -642,182 +627,136 @@
                               ])
                             : null,
                         t.isJoinAGame
-                            ? o('div', { key: 40 }, [
-                                  t.offLine
-                                      ? o(
-                                            'div',
-                                            {
-                                                classMap: {
-                                                    'slds-form-element': !0
-                                                },
-                                                key: 33
-                                            },
-                                            [
-                                                o(
-                                                    'label',
-                                                    {
-                                                        classMap: {
-                                                            'slds-form-element__label': !0
-                                                        },
-                                                        attrs: {
-                                                            for:
-                                                                '' +
-                                                                r(
-                                                                    'text-input-id-1'
-                                                                )
-                                                        },
-                                                        key: 30
-                                                    },
-                                                    [
-                                                        o(
-                                                            'abbr',
-                                                            {
-                                                                classMap: {
-                                                                    'slds-required': !0
-                                                                },
-                                                                attrs: {
-                                                                    title:
-                                                                        'required'
-                                                                },
-                                                                key: 29
-                                                            },
-                                                            [n('* ')]
-                                                        ),
-                                                        n('Input game Id')
-                                                    ]
-                                                ),
-                                                o(
-                                                    'div',
-                                                    {
-                                                        classMap: {
-                                                            'slds-form-element__control': !0
-                                                        },
-                                                        key: 32
-                                                    },
-                                                    [
-                                                        o(
-                                                            'input',
-                                                            {
-                                                                classMap: {
-                                                                    'slds-input': !0,
-                                                                    'slds-var-m-bottom_medium': !0
-                                                                },
-                                                                attrs: {
-                                                                    type:
-                                                                        'text',
-                                                                    id: r(
-                                                                        'text-input-id-3'
-                                                                    )
-                                                                },
-                                                                key: 31,
-                                                                on: {
-                                                                    keyup:
-                                                                        b ||
-                                                                        (a._m10 = i(
-                                                                            t.handleKeyUp
-                                                                        )),
-                                                                    change:
-                                                                        k ||
-                                                                        (a._m11 = i(
-                                                                            t.handleKeyUp
-                                                                        ))
-                                                                }
-                                                            },
-                                                            []
-                                                        )
-                                                    ]
-                                                )
-                                            ]
-                                        )
-                                      : null,
-                                  t.offLine
-                                      ? o(
-                                            'div',
-                                            {
-                                                classMap: {
-                                                    'slds-form-element': !0
-                                                },
-                                                key: 38
-                                            },
-                                            [
-                                                o(
-                                                    'label',
-                                                    {
-                                                        classMap: {
-                                                            'slds-form-element__label': !0
-                                                        },
-                                                        attrs: {
-                                                            for:
-                                                                '' +
-                                                                r(
-                                                                    'text-input-id-1'
-                                                                )
-                                                        },
-                                                        key: 35
-                                                    },
-                                                    [
-                                                        o(
-                                                            'abbr',
-                                                            {
-                                                                classMap: {
-                                                                    'slds-required': !0
-                                                                },
-                                                                attrs: {
-                                                                    title:
-                                                                        'required'
-                                                                },
-                                                                key: 34
-                                                            },
-                                                            [n('* ')]
-                                                        ),
-                                                        n('Your name')
-                                                    ]
-                                                ),
-                                                o(
-                                                    'div',
-                                                    {
-                                                        classMap: {
-                                                            'slds-form-element__control': !0
-                                                        },
-                                                        key: 37
-                                                    },
-                                                    [
-                                                        o(
-                                                            'input',
-                                                            {
-                                                                classMap: {
-                                                                    'slds-input': !0,
-                                                                    'slds-var-m-bottom_medium': !0
-                                                                },
-                                                                attrs: {
-                                                                    type:
-                                                                        'text',
-                                                                    id: r(
-                                                                        'text-input-id-4'
-                                                                    )
-                                                                },
-                                                                key: 36,
-                                                                on: {
-                                                                    keyup:
-                                                                        _ ||
-                                                                        (a._m12 = i(
-                                                                            t.handlePlayerName
-                                                                        )),
-                                                                    change:
-                                                                        M ||
-                                                                        (a._m13 = i(
-                                                                            t.handlePlayerName
-                                                                        ))
-                                                                }
-                                                            },
-                                                            []
-                                                        )
-                                                    ]
-                                                )
-                                            ]
-                                        )
-                                      : null,
-                                  o(
+                            ? i('div', { key: 37 }, [
+                                  i(
+                                      'div',
+                                      {
+                                          classMap: { 'slds-form-element': !0 },
+                                          key: 31
+                                      },
+                                      [
+                                          i(
+                                              'label',
+                                              {
+                                                  classMap: {
+                                                      'slds-form-element__label': !0
+                                                  },
+                                                  attrs: {
+                                                      for:
+                                                          '' +
+                                                          l('text-input-id-1')
+                                                  },
+                                                  key: 28
+                                              },
+                                              [n('Input game Id')]
+                                          ),
+                                          i(
+                                              'div',
+                                              {
+                                                  classMap: {
+                                                      'slds-form-element__control': !0
+                                                  },
+                                                  key: 30
+                                              },
+                                              [
+                                                  i(
+                                                      'input',
+                                                      {
+                                                          classMap: {
+                                                              'slds-input': !0,
+                                                              'slds-var-m-bottom_medium': !0
+                                                          },
+                                                          attrs: {
+                                                              type: 'text',
+                                                              id: l(
+                                                                  'text-input-id-3'
+                                                              )
+                                                          },
+                                                          key: 29,
+                                                          on: {
+                                                              keyup:
+                                                                  b ||
+                                                                  (a._m10 = o(
+                                                                      t.handleKeyUp
+                                                                  )),
+                                                              change:
+                                                                  k ||
+                                                                  (a._m11 = o(
+                                                                      t.handleKeyUp
+                                                                  ))
+                                                          }
+                                                      },
+                                                      []
+                                                  )
+                                              ]
+                                          )
+                                      ]
+                                  ),
+                                  i(
+                                      'div',
+                                      {
+                                          classMap: { 'slds-form-element': !0 },
+                                          key: 35
+                                      },
+                                      [
+                                          i(
+                                              'label',
+                                              {
+                                                  classMap: {
+                                                      'slds-form-element__label': !0
+                                                  },
+                                                  attrs: {
+                                                      for:
+                                                          '' +
+                                                          l('text-input-id-1')
+                                                  },
+                                                  key: 32
+                                              },
+                                              [n('Your name')]
+                                          ),
+                                          i(
+                                              'div',
+                                              {
+                                                  classMap: {
+                                                      'slds-form-element__control': !0
+                                                  },
+                                                  key: 34
+                                              },
+                                              [
+                                                  i(
+                                                      'input',
+                                                      {
+                                                          classMap: {
+                                                              'slds-input': !0,
+                                                              'slds-var-m-bottom_medium': !0
+                                                          },
+                                                          attrs: {
+                                                              type: 'text',
+                                                              id: l(
+                                                                  'text-input-id-4'
+                                                              )
+                                                          },
+                                                          key: 33,
+                                                          on: {
+                                                              keyup:
+                                                                  _ ||
+                                                                  (a._m12 = o(
+                                                                      t.handlePlayerName
+                                                                  )),
+                                                              change:
+                                                                  M ||
+                                                                  (a._m13 = o(
+                                                                      t.handlePlayerName
+                                                                  ))
+                                                          }
+                                                      },
+                                                      []
+                                                  )
+                                              ]
+                                          )
+                                      ]
+                                  ),
+                                  i(
                                       'button',
                                       {
                                           classMap: {
@@ -825,10 +764,10 @@
                                               'slds-button_brand': !0,
                                               'slds-var-m-top_medium': !0
                                           },
-                                          key: 39,
+                                          key: 36,
                                           on: {
                                               click:
-                                                  w || (a._m14 = i(t.joinGame))
+                                                  w || (a._m14 = o(t.joinGame))
                                           }
                                       },
                                       [n('Join')]
@@ -836,17 +775,17 @@
                               ])
                             : null,
                         t.isWaitingForJoining
-                            ? o('div', { key: 47 }, [
-                                  o(
+                            ? i('div', { key: 44 }, [
+                                  i(
                                       'div',
                                       {
                                           classMap: {
                                               'slds-spinner_container': !0
                                           },
-                                          key: 46
+                                          key: 43
                                       },
                                       [
-                                          o(
+                                          i(
                                               'div',
                                               {
                                                   classMap: {
@@ -855,48 +794,48 @@
                                                       'slds-spinner_brand': !0
                                                   },
                                                   attrs: { role: 'status' },
-                                                  key: 45
+                                                  key: 42
                                               },
                                               [
-                                                  o(
+                                                  i(
                                                       'span',
                                                       {
                                                           classMap: {
                                                               'slds-assistive-text': !0
                                                           },
-                                                          key: 41
+                                                          key: 38
                                                       },
                                                       [n('Loading')]
                                                   ),
-                                                  o(
+                                                  i(
                                                       'div',
                                                       {
                                                           classMap: {
                                                               'slds-spinner__dot-a': !0
                                                           },
-                                                          key: 42
+                                                          key: 39
                                                       },
                                                       []
                                                   ),
-                                                  o(
+                                                  i(
                                                       'div',
                                                       {
                                                           classMap: {
                                                               'slds-spinner__dot-b': !0
                                                           },
-                                                          key: 43
+                                                          key: 40
                                                       },
                                                       []
                                                   ),
-                                                  o(
+                                                  i(
                                                       'div',
                                                       {
                                                           classMap: {
                                                               'custom-loading-text': !0
                                                           },
-                                                          key: 44
+                                                          key: 41
                                                       },
-                                                      [l(t.waitingMsg)]
+                                                      [r(t.waitingMsg)]
                                                   )
                                               ]
                                           )
@@ -908,10 +847,10 @@
                 )
             ];
         }
-        var l = Object(a.registerTemplate)(r);
-        (r.stylesheets = []),
-            o && r.stylesheets.push.apply(r.stylesheets, o),
-            (r.stylesheetTokens = {
+        var r = Object(a.registerTemplate)(l);
+        (l.stylesheets = []),
+            i && l.stylesheets.push.apply(l.stylesheets, i),
+            (l.stylesheetTokens = {
                 hostAttribute: 'my-gamepanel-_gamepanel-host',
                 shadowAttribute: 'my-gamepanel-_gamepanel'
             });
@@ -1020,12 +959,12 @@
                 'opponentName'
             ]
         });
-        var d = Object(a.registerComponent)(c, { tmpl: l });
+        var d = Object(a.registerComponent)(c, { tmpl: r });
         function m(e, t, s, a) {
-            const { t: n, d: i, h: o, k: r, b: l, i: c, c: m } = e,
+            const { t: n, d: o, h: i, k: l, b: r, i: c, c: m } = e,
                 { _m0: p, _m1: h, _m2: g } = a;
             return [
-                o(
+                i(
                     'div',
                     {
                         classMap: {
@@ -1035,8 +974,8 @@
                         key: 9
                     },
                     [
-                        o('div', { classMap: { 'slds-grid': !0 }, key: 8 }, [
-                            o(
+                        i('div', { classMap: { 'slds-grid': !0 }, key: 8 }, [
+                            i(
                                 'div',
                                 {
                                     classMap: {
@@ -1046,13 +985,13 @@
                                     key: 1
                                 },
                                 [
-                                    o('span', { key: 0 }, [
+                                    i('span', { key: 0 }, [
                                         n('You : '),
-                                        i(t.senderPlayerName)
+                                        o(t.senderPlayerName)
                                     ])
                                 ]
                             ),
-                            o(
+                            i(
                                 'div',
                                 {
                                     classMap: {
@@ -1063,7 +1002,7 @@
                                     key: 5
                                 },
                                 [
-                                    o(
+                                    i(
                                         'div',
                                         {
                                             classMap: {
@@ -1078,7 +1017,7 @@
                                             key: 4
                                         },
                                         [
-                                            o(
+                                            i(
                                                 'span',
                                                 {
                                                     classMap: {
@@ -1088,7 +1027,7 @@
                                                     key: 3
                                                 },
                                                 [
-                                                    o(
+                                                    i(
                                                         'span',
                                                         {
                                                             classMap: {
@@ -1104,7 +1043,7 @@
                                     )
                                 ]
                             ),
-                            o(
+                            i(
                                 'div',
                                 {
                                     classMap: {
@@ -1115,35 +1054,35 @@
                                     key: 7
                                 },
                                 [
-                                    o('span', { key: 6 }, [
+                                    i('span', { key: 6 }, [
                                         n('Opponent : '),
-                                        i(t.receiverPlayerName)
+                                        o(t.receiverPlayerName)
                                     ])
                                 ]
                             )
                         ])
                     ]
                 ),
-                o('div', { classMap: { 'game-container': !0 }, key: 30 }, [
-                    o('div', { classMap: { gameBlock: !0 }, key: 14 }, [
-                        o(
+                i('div', { classMap: { 'game-container': !0 }, key: 30 }, [
+                    i('div', { classMap: { gameBlock: !0 }, key: 14 }, [
+                        i(
                             'div',
                             {
                                 classMap: { 'slds-grid': !0, 'slds-wrap': !0 },
                                 key: 13
                             },
                             c(t.gameBlock, function (e) {
-                                return o(
+                                return i(
                                     'div',
                                     {
                                         classMap: {
                                             'slds-col': !0,
                                             'slds-size_1-of-3': !0
                                         },
-                                        key: r(12, e.cordinate)
+                                        key: l(12, e.cordinate)
                                     },
                                     [
-                                        o(
+                                        i(
                                             'div',
                                             {
                                                 className: e.class,
@@ -1151,17 +1090,17 @@
                                                     'data-target-id':
                                                         e.cordinate
                                                 },
-                                                key: r(11, e.cordinate),
+                                                key: l(11, e.cordinate),
                                                 on: {
                                                     click:
                                                         p ||
-                                                        (a._m0 = l(
+                                                        (a._m0 = r(
                                                             t.handleBlock
                                                         ))
                                                 }
                                             },
                                             [
-                                                o(
+                                                i(
                                                     'p',
                                                     {
                                                         classMap: {
@@ -1174,7 +1113,7 @@
                                                         },
                                                         key: 10
                                                     },
-                                                    [i(e.label)]
+                                                    [o(e.label)]
                                                 )
                                             ]
                                         )
@@ -1184,18 +1123,18 @@
                         )
                     ]),
                     t.showOverLay
-                        ? o(
+                        ? i(
                               'div',
                               { classMap: { overlayToStop: !0 }, key: 22 },
                               [
-                                  o(
+                                  i(
                                       'div',
                                       {
                                           classMap: { 'overlay-content': !0 },
                                           key: 21
                                       },
                                       [
-                                          o(
+                                          i(
                                               'div',
                                               {
                                                   classMap: {
@@ -1204,7 +1143,7 @@
                                                   key: 20
                                               },
                                               [
-                                                  o(
+                                                  i(
                                                       'div',
                                                       {
                                                           classMap: {
@@ -1218,7 +1157,7 @@
                                                           key: 19
                                                       },
                                                       [
-                                                          o(
+                                                          i(
                                                               'span',
                                                               {
                                                                   classMap: {
@@ -1228,7 +1167,7 @@
                                                               },
                                                               [n('Loading')]
                                                           ),
-                                                          o(
+                                                          i(
                                                               'div',
                                                               {
                                                                   classMap: {
@@ -1238,7 +1177,7 @@
                                                               },
                                                               []
                                                           ),
-                                                          o(
+                                                          i(
                                                               'div',
                                                               {
                                                                   classMap: {
@@ -1248,7 +1187,7 @@
                                                               },
                                                               []
                                                           ),
-                                                          o(
+                                                          i(
                                                               'div',
                                                               {
                                                                   classMap: {
@@ -1272,18 +1211,18 @@
                           )
                         : null,
                     t.winningOrLose
-                        ? o(
+                        ? i(
                               'div',
                               { classMap: { overlayToStop: !0 }, key: 26 },
                               [
-                                  o(
+                                  i(
                                       'div',
                                       {
                                           classMap: { 'overlay-content': !0 },
                                           key: 25
                                       },
                                       [
-                                          o(
+                                          i(
                                               'div',
                                               {
                                                   classMap: {
@@ -1292,8 +1231,8 @@
                                                   key: 24
                                               },
                                               [
-                                                  o('p', { key: 23 }, [
-                                                      i(t.winningOrLoseMsg)
+                                                  i('p', { key: 23 }, [
+                                                      o(t.winningOrLoseMsg)
                                                   ])
                                               ]
                                           )
@@ -1304,8 +1243,8 @@
                         : null,
                     t.activeGame
                         ? null
-                        : o('div', { classMap: { overlay: !0 }, key: 29 }, [
-                              o(
+                        : i('div', { classMap: { overlay: !0 }, key: 29 }, [
+                              i(
                                   'div',
                                   {
                                       classMap: { 'overlay-content': !0 },
@@ -1320,12 +1259,12 @@
                                               on: {
                                                   joingame:
                                                       h ||
-                                                      (a._m1 = l(
+                                                      (a._m1 = r(
                                                           t.setReceiverId
                                                       )),
                                                   startgame:
                                                       g ||
-                                                      (a._m2 = l(t.startGame))
+                                                      (a._m2 = r(t.startGame))
                                               }
                                           },
                                           []
@@ -1338,7 +1277,7 @@
         }
         var p = Object(a.registerTemplate)(m);
         (m.stylesheets = []),
-            i && m.stylesheets.push.apply(m.stylesheets, i),
+            o && m.stylesheets.push.apply(m.stylesheets, o),
             (m.stylesheetTokens = {
                 hostAttribute: 'my-game-_game-host',
                 shadowAttribute: 'my-game-_game'

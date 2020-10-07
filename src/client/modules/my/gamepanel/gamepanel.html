@@ -69,9 +69,8 @@
             </fieldset>
 
             <div class="slds-form-element">
-                <label class="slds-form-element__label" for="text-input-id-1">
-                    <abbr class="slds-required" title="required">* </abbr>Your
-                    name</label
+                <label class="slds-form-element__label" for="text-input-id-1"
+                    >Your name</label
                 >
                 <div class="slds-form-element__control">
                     <input
@@ -85,7 +84,7 @@
             </div>
 
             <div class="slds-form-element" if:true={offLine}>
-                <label class="slds-form-element__label" for="text-input-id-1">
+                <label class="slds-form-element__label" for="text-input-id-2">
                     <abbr class="slds-required" title="required">* </abbr
                     >Opponent name</label
                 >
@@ -111,10 +110,9 @@
             </button>
         </div>
         <div if:true={isJoinAGame}>
-            <div class="slds-form-element" if:true={offLine}>
+            <div class="slds-form-element">
                 <label class="slds-form-element__label" for="text-input-id-1">
-                    <abbr class="slds-required" title="required">* </abbr>Input
-                    game Id</label
+                    Input game Id</label
                 >
                 <div class="slds-form-element__control">
                     <input
@@ -127,10 +125,9 @@
                 </div>
             </div>
 
-            <div class="slds-form-element" if:true={offLine}>
+            <div class="slds-form-element">
                 <label class="slds-form-element__label" for="text-input-id-1">
-                    <abbr class="slds-required" title="required">* </abbr>Your
-                    name</label
+                    Your name</label
                 >
                 <div class="slds-form-element__control">
                     <input
