@@ -1,10 +1,6 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 import { LightningElement, api } from 'lwc';
-// import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-// import { subscribe, unsubscribe, onError, setDebugFlag, isEmpEnabled } from 'lightning/empApi';
-
-// import publishJoinGame from '@salesforce/apex/PublishTicTacToeGameEvent.joinGame';
 
 //Author Rasmit Kumar
 export default class Gamepanel extends LightningElement {
@@ -98,13 +94,6 @@ export default class Gamepanel extends LightningElement {
     joinGame() {
         this.isWaitingForJoining = true;
         this.isJoinAGame = false;
-        // publishJoinGame({receiverGameId : this.receiverGameId,playerName : this.playerName})
-        // .then(data => {
-        //     console.log(data)
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        // })
         const selectedEvent = new CustomEvent('joingame', {
             detail: {
                 receiverGameId: this.receiverGameId,
@@ -114,14 +103,5 @@ export default class Gamepanel extends LightningElement {
 
         this.dispatchEvent(selectedEvent);
         //Send receiver id and name.
-    }
-
-    showToastNotification(msg) {
-        // const event = new ShowToastEvent({
-        //     title: 'Warning',
-        //     message: msg,
-        //     variant : 'warning'
-        // });
-        // this.dispatchEvent(event);
     }
 }

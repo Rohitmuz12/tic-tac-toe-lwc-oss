@@ -1,61 +1,169 @@
 <template>
     <div class="slds-m-top_small slds-m-bottom_medium">
-    <div if:true={isNoActiveGame}>
-        <button variant="brand" label="Create game" onclick={createGame} class="slds-button slds-button_brand slds-m-left_x-small">Create game</button>
-        <button class="slds-button slds-button_brand slds-m-left_x-small" onclick={joinAGame}>Join game</button>
-    </div>
-    <div if:true={isCreateGame}>
-            <radioGroup name="channelGroup"
-                                  label="Choose game type"
-                                  options={channelOptions}
-                                  value={value}
-                                  onchange={handleChannelOnchange}
-                                  type="radio"
-                                  class="slds-var-m-bottom_medium">
+        <div if:true={isNoActiveGame}>
+            <button
+                variant="brand"
+                label="Create game"
+                onclick={createGame}
+                class="slds-button slds-button_brand slds-m-left_x-small"
+            >
+                Create game
+            </button>
+            <button
+                class="slds-button slds-button_brand slds-m-left_x-small"
+                onclick={joinAGame}
+            >
+                Join game
+            </button>
+        </div>
+        <div if:true={isCreateGame}>
+            <radioGroup
+                name="channelGroup"
+                label="Choose game type"
+                options={channelOptions}
+                value={value}
+                onchange={handleChannelOnchange}
+                type="radio"
+                class="slds-var-m-bottom_medium"
+            >
             </radioGroup>
 
             <fieldset class="slds-form-element slds-var-m-bottom_medium">
-                <legend class="slds-form-element__legend slds-form-element__label">Choose game type</legend>
+                <legend
+                    class="slds-form-element__legend slds-form-element__label"
+                >
+                    Choose game type
+                </legend>
                 <div class="slds-form-element__control">
-                  <span class="slds-radio">
-                    <input type="radio" id="radio-43" value="online" onchange={handleChannelOnchange} name="default"/>
-                    <label class="slds-radio__label" for="radio-43">
-                      <span class="slds-radio_faux"></span>
-                      <span class="slds-form-element__label">Play online</span>
-                    </label>
-                  </span>
-                  <span class="slds-radio">
-                    <input type="radio" id="radio-44" onchange={handleChannelOnchange} value="offline" name="default" />
-                    <label class="slds-radio__label" for="radio-44">
-                      <span class="slds-radio_faux"></span>
-                      <span class="slds-form-element__label">Play N Pass</span>
-                    </label>
-                  </span>
+                    <span class="slds-radio">
+                        <input
+                            type="radio"
+                            id="radio-43"
+                            value="online"
+                            onchange={handleChannelOnchange}
+                            name="default"
+                        />
+                        <label class="slds-radio__label" for="radio-43">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label"
+                                >Play online</span
+                            >
+                        </label>
+                    </span>
+                    <span class="slds-radio">
+                        <input
+                            type="radio"
+                            id="radio-44"
+                            onchange={handleChannelOnchange}
+                            value="offline"
+                            name="default"
+                        />
+                        <label class="slds-radio__label" for="radio-44">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label"
+                                >Play N Pass</span
+                            >
+                        </label>
+                    </span>
                 </div>
-              </fieldset>
+            </fieldset>
 
-            <input type="text" label="Your name" onkeyup={handlePlayerName} onchange={handlePlayerName} value={playerName} class="slds-input slds-var-m-bottom_medium"></input>
-            <input type="text" label="Opponent name" onkeyup={handleOpponentName} onchange={handleOpponentName} value={opponentName} class="slds-input slds-var-m-bottom_medium" if:true={offLine}></input>
-        
-            <button onclick={startGame} class="slds-button slds-button_brand slds-var-m-top_medium">Start Game</button>
-    </div>
-    <div if:true={isJoinAGame}>
-        <input type="text" label="Input game Id" onkeyup={handleKeyUp} value={gameId} class="slds-input slds-var-m-bottom_medium"></input>
-        <input type="text" label="Your name" onkeyup={handlePlayerName} onchange={handlePlayerName} value={playerName} class="slds-input slds-var-m-bottom_medium"></input>
-        
-        <button onclick={joinGame} class="slds-button slds-button_brand slds-var-m-top_medium">Join</button>
-    </div>
-    <div if:true={isWaitingForJoining}>
-            <div class="slds-spinner_container ">
-                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">
+                    <abbr class="slds-required" title="required">* </abbr>Your
+                    name</label
+                >
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="text-input-id-1"
+                        onkeyup={handlePlayerName}
+                        onchange={handlePlayerName}
+                        class="slds-input slds-var-m-bottom_medium"
+                    />
+                </div>
+            </div>
+
+            <div class="slds-form-element" if:true={offLine}>
+                <label class="slds-form-element__label" for="text-input-id-1">
+                    <abbr class="slds-required" title="required">* </abbr
+                    >Opponent name</label
+                >
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="text-input-id-2"
+                        onkeyup={handleOpponentName}
+                        onchange={handleOpponentName}
+                        class="slds-input slds-var-m-bottom_medium"
+                    />
+                </div>
+            </div>
+
+            <!-- <input type="text" label="Your name" onkeyup={handlePlayerName} onchange={handlePlayerName} value={playerName} class="slds-input slds-var-m-bottom_medium"></input>
+            <input type="text" label="Opponent name" onkeyup={handleOpponentName} onchange={handleOpponentName} value={opponentName} class="slds-input slds-var-m-bottom_medium" if:true={offLine}></input> -->
+
+            <button
+                onclick={startGame}
+                class="slds-button slds-button_brand slds-var-m-top_medium"
+            >
+                Start Game
+            </button>
+        </div>
+        <div if:true={isJoinAGame}>
+            <div class="slds-form-element" if:true={offLine}>
+                <label class="slds-form-element__label" for="text-input-id-1">
+                    <abbr class="slds-required" title="required">* </abbr>Input
+                    game Id</label
+                >
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="text-input-id-3"
+                        onkeyup={handleKeyUp}
+                        onchange={handleKeyUp}
+                        class="slds-input slds-var-m-bottom_medium"
+                    />
+                </div>
+            </div>
+
+            <div class="slds-form-element" if:true={offLine}>
+                <label class="slds-form-element__label" for="text-input-id-1">
+                    <abbr class="slds-required" title="required">* </abbr>Your
+                    name</label
+                >
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="text-input-id-4"
+                        onkeyup={handlePlayerName}
+                        onchange={handlePlayerName}
+                        class="slds-input slds-var-m-bottom_medium"
+                    />
+                </div>
+            </div>
+
+            <!-- <input type="text" label="Input game Id" onkeyup={handleKeyUp} value={gameId} class="slds-input slds-var-m-bottom_medium"></input>
+        <input type="text" label="Your name" onkeyup={handlePlayerName} onchange={handlePlayerName} value={playerName} class="slds-input slds-var-m-bottom_medium"></input> -->
+
+            <button
+                onclick={joinGame}
+                class="slds-button slds-button_brand slds-var-m-top_medium"
+            >
+                Join
+            </button>
+        </div>
+        <div if:true={isWaitingForJoining}>
+            <div class="slds-spinner_container">
+                <div
+                    role="status"
+                    class="slds-spinner slds-spinner_medium slds-spinner_brand"
+                >
                     <span class="slds-assistive-text">Loading</span>
                     <div class="slds-spinner__dot-a"></div>
                     <div class="slds-spinner__dot-b"></div>
-                    <div class="custom-loading-text">
-                        {waitingMsg}
-                    </div>
+                    <div class="custom-loading-text">{waitingMsg}</div>
                 </div>
-    
             </div>
         </div>
     </div>
