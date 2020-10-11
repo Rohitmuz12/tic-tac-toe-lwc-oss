@@ -48,11 +48,11 @@ io.on('connection', (socket) => {
         socket.emit('get roomId', socket.id);
         roomId[socket.id] = socket.id;
         // eslint-disable-next-line dot-notation
-        roomId['joinned'] = false;
+        roomId[socket.id]['joinned'] = false;
     });
 
     socket.on('confirm room id', (data) => {
-        if (!roomId['joinned']) {
+        if (!roomId[data.roomId]['joinned']) {
             console.log(roomId[data.roomId]);
             io.to(roomId[data.roomId]).emit('joinned', {
                 roomId: socket.id,
@@ -60,7 +60,7 @@ io.on('connection', (socket) => {
                 join: roomId['joinned']
             });
             // socket.emit('joinned', {roomId : socket.id});
-            roomId['joinned'] = true;
+            roomId[data.roomId]['joinned'] = true;
             console.log(roomId);
             console.log('joinned true');
         } else {
