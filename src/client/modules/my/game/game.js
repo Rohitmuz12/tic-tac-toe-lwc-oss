@@ -83,6 +83,9 @@ export default class Game extends LightningElement {
             if (this.checkForWinning(this.currentSymbol, data.cordinate)) {
                 this.winningOrLoseMsg = 'You lose';
                 this.winningOrLose = true;
+            } else if (this.isGridFull()) {
+                this.winningOrLoseMsg = 'Game tied';
+                this.winningOrLose = true;
             } else {
                 this.showProgress = true;
                 this.progress = 1;
@@ -239,24 +242,13 @@ export default class Game extends LightningElement {
             return false;
         }
         const win = this.playMove(targetId);
-        console.log(this.selectedChannel);
-        console.log(this.senderGameId);
         if (this.selectedChannel === 'online') {
             this.socket.emit('play move', {
                 cordinate: targetId,
                 roomId: this.senderGameId
             });
         }
-        if (!win) {
-            if (this.selectedChannel === 'online') this.showOverLay = true;
-            else {
-                this.progress = 1;
-                this.template.querySelector(
-                    '.slds-progress-bar__value'
-                ).style = `width : ${this.progress}%`;
-                this.setIntervalFunction();
-            }
-        } else {
+        if (win) {
             if (this.selectedChannel === 'offline') {
                 if (this.currentSymbol === 'O') {
                     this.winningOrLoseMsg = this.senderPlayerName + ' win!';
@@ -267,7 +259,29 @@ export default class Game extends LightningElement {
                 this.winningOrLoseMsg = 'You win!';
             }
             this.winningOrLose = true;
+        } else if (this.isGridFull()) {
+            this.winningOrLoseMsg = 'Game tied';
+            this.winningOrLose = true;
+        } else if (!win) {
+            if (this.selectedChannel === 'online') this.showOverLay = true;
+            else {
+                this.progress = 1;
+                this.template.querySelector(
+                    '.slds-progress-bar__value'
+                ).style = `width : ${this.progress}%`;
+                this.setIntervalFunction();
+            }
         }
+    }
+
+    isGridFull() {
+        let isFull = true;
+
+        this.gameBlock.forEach((element) => {
+            if (element.class === 'blank') isFull = false;
+        });
+
+        return isFull;
     }
 
     playMove(currentCordinate) {
