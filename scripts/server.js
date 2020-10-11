@@ -84,4 +84,13 @@ io.on('connection', (socket) => {
             cordinate: data.cordinate
         });
     });
+
+    socket.on('start again', (data) => {
+        console.log('Start again');
+        io.to(data.roomId).emit('rematch', 'rematch');
+    });
+
+    socket.on('player not available', (data) => {
+        io.to(data.roomId).emit('no player', 'noPlayer');
+    });
 });

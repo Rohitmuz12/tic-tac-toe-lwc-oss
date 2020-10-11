@@ -25,29 +25,30 @@
 }
 
 .gameBlock {
-    height: 350px;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* height: 350px;
     width: 350px;
-    margin-left: 37%;
+    margin-left: 37%; */
 }
 
 .slds-wrap div {
-    height: 100px;
+    /* height: 100px; */
     /* margin-left: 1%; */
     /* margin-top: 2%; */
     /* margin-bottom: 2%; */
-    width: 100px !important;
+    /* width: 100px !important; */
     border: 1px solid black;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .symbol {
-    margin-left: 16%;
     font-size: 6em;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -67,7 +68,7 @@
 }
 
 .overlayToStop {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;

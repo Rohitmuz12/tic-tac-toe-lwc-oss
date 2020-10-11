@@ -70,11 +70,48 @@
         </div>
         <div class="overlayToStop" if:true={winningOrLose}>
             <div class="overlay-content">
-                <div class="custom-loading-text-1">
-                    <p>{winningOrLoseMsg}</p>
+                <div>
+                    <p class="custom-loading-text-1">{winningOrLoseMsg}</p>
+                    <div class="slds-align_absolute-center slds-m-top_x-small">
+                        <button
+                            if:false={isRematch}
+                            onclick={startAgain}
+                            class="slds-button slds-button_brand slds-m-left_x-small"
+                        >
+                            Start again
+                        </button>
+                        <button
+                            if:true={isRematch}
+                            onclick={rematch}
+                            class="slds-button slds-button_brand slds-m-left_x-small"
+                        >
+                            Rematch
+                        </button>
+                        <button
+                            onclick={exitGame}
+                            class="slds-button slds-button_brand slds-m-left_x-small"
+                        >
+                            Exit
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="overlayToStop" if:true={isNoPlayer}>
+            <div class="overlay-content">
+                <div>
+                    <p class="custom-loading-text-1">Player left the game</p>
+                    <button
+                        onclick={exitGame}
+                        class="slds-button slds-button_brand slds-var-m-top_medium slds-align_absolute-center"
+                    >
+                        Exit
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <template if:false={activeGame}>
             <div class="overlay">
                 <div class="overlay-content">

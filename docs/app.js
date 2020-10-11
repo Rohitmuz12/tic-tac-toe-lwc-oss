@@ -1,18 +1,18 @@
 !(function (e) {
     function t(t) {
         for (
-            var a, i, l = t[0], r = t[1], c = t[2], m = 0, p = [];
+            var a, i, l = t[0], r = t[1], c = t[2], m = 0, h = [];
             m < l.length;
             m++
         )
             (i = l[m]),
                 Object.prototype.hasOwnProperty.call(n, i) &&
                     n[i] &&
-                    p.push(n[i][0]),
+                    h.push(n[i][0]),
                 (n[i] = 0);
         for (a in r)
             Object.prototype.hasOwnProperty.call(r, a) && (e[a] = r[a]);
-        for (d && d(t); p.length; ) p.shift()();
+        for (d && d(t); h.length; ) h.shift()();
         return o.push.apply(o, c || []), s();
     }
     function s() {
@@ -136,19 +136,19 @@
                     t,
                     '{background-color:#000;color:#fff}.gameBlock',
                     t,
-                    '{height:350px;width:350px;margin-left:37%}.slds-wrap',
+                    '{margin-left:15%;margin-right:15%}.slds-wrap',
                     t,
                     ' div',
                     t,
-                    '{height:100px;width:100px!important;border:1px solid #000;display:inline-block}.symbol',
+                    '{border:1px solid #000}.symbol',
                     t,
-                    '{margin-left:16%;font-size:6em;display:inline-block}.overlay',
+                    '{font-size:6em}.overlay',
                     t,
-                    '{position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.9);z-index:2}.overlay-content',
+                    '{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.9);z-index:2}.overlay-content',
                     t,
                     '{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}.overlayToStop',
                     t,
-                    '{position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.4);z-index:2}.custom-loading-text',
+                    '{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.4);z-index:2}.custom-loading-text',
                     t,
                     '{color:#a8eca8;transform:rotate(-90deg);font-size:large;position:absolute;top:-.5rem;left:-1rem;white-space:pre;text-align:center}.custom-loading-text-1',
                     t,
@@ -173,14 +173,14 @@
                     _m0: c,
                     _m1: d,
                     _m2: m,
-                    _m3: p,
-                    _m4: h,
+                    _m3: h,
+                    _m4: p,
                     _m5: g,
                     _m6: u,
                     _m7: y,
                     _m8: v,
-                    _m9: f,
-                    _m10: b,
+                    _m9: b,
+                    _m10: f,
                     _m11: k,
                     _m12: _,
                     _m13: M,
@@ -321,7 +321,7 @@
                                                                   key: 5,
                                                                   on: {
                                                                       change:
-                                                                          p ||
+                                                                          h ||
                                                                           (a._m3 = o(
                                                                               t.handleChannelOnchange
                                                                           ))
@@ -401,7 +401,7 @@
                                                                   key: 10,
                                                                   on: {
                                                                       change:
-                                                                          h ||
+                                                                          p ||
                                                                           (a._m4 = o(
                                                                               t.handleChannelOnchange
                                                                           ))
@@ -619,7 +619,7 @@
                                           key: 26,
                                           on: {
                                               click:
-                                                  f || (a._m9 = o(t.startGame))
+                                                  b || (a._m9 = o(t.startGame))
                                           }
                                       },
                                       [n('Start Game')]
@@ -675,7 +675,7 @@
                                                           key: 29,
                                                           on: {
                                                               keyup:
-                                                                  b ||
+                                                                  f ||
                                                                   (a._m10 = o(
                                                                       t.handleKeyUp
                                                                   )),
@@ -962,7 +962,7 @@
         var d = Object(a.registerComponent)(c, { tmpl: r });
         function m(e, t, s, a) {
             const { t: n, d: o, h: i, k: l, b: r, i: c, c: m } = e,
-                { _m0: p, _m1: h, _m2: g } = a;
+                { _m0: h, _m1: p, _m2: g, _m3: u, _m4: y, _m5: v, _m6: b } = a;
             return [
                 i(
                     'div',
@@ -1063,7 +1063,7 @@
                         ])
                     ]
                 ),
-                i('div', { classMap: { 'game-container': !0 }, key: 30 }, [
+                i('div', { classMap: { 'game-container': !0 }, key: 39 }, [
                     i('div', { classMap: { gameBlock: !0 }, key: 14 }, [
                         i(
                             'div',
@@ -1093,7 +1093,7 @@
                                                 key: l(11, e.cordinate),
                                                 on: {
                                                     click:
-                                                        p ||
+                                                        h ||
                                                         (a._m0 = r(
                                                             t.handleBlock
                                                         ))
@@ -1213,29 +1213,153 @@
                     t.winningOrLose
                         ? i(
                               'div',
-                              { classMap: { overlayToStop: !0 }, key: 26 },
+                              { classMap: { overlayToStop: !0 }, key: 30 },
                               [
                                   i(
                                       'div',
                                       {
                                           classMap: { 'overlay-content': !0 },
-                                          key: 25
+                                          key: 29
                                       },
                                       [
-                                          i(
-                                              'div',
-                                              {
-                                                  classMap: {
-                                                      'custom-loading-text-1': !0
+                                          i('div', { key: 28 }, [
+                                              i(
+                                                  'p',
+                                                  {
+                                                      classMap: {
+                                                          'custom-loading-text-1': !0
+                                                      },
+                                                      key: 23
                                                   },
-                                                  key: 24
-                                              },
-                                              [
-                                                  i('p', { key: 23 }, [
-                                                      o(t.winningOrLoseMsg)
-                                                  ])
-                                              ]
-                                          )
+                                                  [o(t.winningOrLoseMsg)]
+                                              ),
+                                              i(
+                                                  'div',
+                                                  {
+                                                      classMap: {
+                                                          'slds-align_absolute-center': !0,
+                                                          'slds-m-top_x-small': !0
+                                                      },
+                                                      key: 27
+                                                  },
+                                                  [
+                                                      t.isRematch
+                                                          ? null
+                                                          : i(
+                                                                'button',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-button': !0,
+                                                                        'slds-button_brand': !0,
+                                                                        'slds-m-left_x-small': !0
+                                                                    },
+                                                                    key: 24,
+                                                                    on: {
+                                                                        click:
+                                                                            p ||
+                                                                            (a._m1 = r(
+                                                                                t.startAgain
+                                                                            ))
+                                                                    }
+                                                                },
+                                                                [
+                                                                    n(
+                                                                        'Start again'
+                                                                    )
+                                                                ]
+                                                            ),
+                                                      t.isRematch
+                                                          ? i(
+                                                                'button',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-button': !0,
+                                                                        'slds-button_brand': !0,
+                                                                        'slds-m-left_x-small': !0
+                                                                    },
+                                                                    key: 25,
+                                                                    on: {
+                                                                        click:
+                                                                            g ||
+                                                                            (a._m2 = r(
+                                                                                t.rematch
+                                                                            ))
+                                                                    }
+                                                                },
+                                                                [n('Rematch')]
+                                                            )
+                                                          : null,
+                                                      i(
+                                                          'button',
+                                                          {
+                                                              classMap: {
+                                                                  'slds-button': !0,
+                                                                  'slds-button_brand': !0,
+                                                                  'slds-m-left_x-small': !0
+                                                              },
+                                                              key: 26,
+                                                              on: {
+                                                                  click:
+                                                                      u ||
+                                                                      (a._m3 = r(
+                                                                          t.exitGame
+                                                                      ))
+                                                              }
+                                                          },
+                                                          [n('Exit')]
+                                                      )
+                                                  ]
+                                              )
+                                          ])
+                                      ]
+                                  )
+                              ]
+                          )
+                        : null,
+                    t.isNoPlayer
+                        ? i(
+                              'div',
+                              { classMap: { overlayToStop: !0 }, key: 35 },
+                              [
+                                  i(
+                                      'div',
+                                      {
+                                          classMap: { 'overlay-content': !0 },
+                                          key: 34
+                                      },
+                                      [
+                                          i('div', { key: 33 }, [
+                                              i(
+                                                  'p',
+                                                  {
+                                                      classMap: {
+                                                          'custom-loading-text-1': !0
+                                                      },
+                                                      key: 31
+                                                  },
+                                                  [n('Player left the game')]
+                                              ),
+                                              i(
+                                                  'button',
+                                                  {
+                                                      classMap: {
+                                                          'slds-button': !0,
+                                                          'slds-button_brand': !0,
+                                                          'slds-var-m-top_medium': !0,
+                                                          'slds-align_absolute-center': !0
+                                                      },
+                                                      key: 32,
+                                                      on: {
+                                                          click:
+                                                              y ||
+                                                              (a._m4 = r(
+                                                                  t.exitGame
+                                                              ))
+                                                      }
+                                                  },
+                                                  [n('Exit')]
+                                              )
+                                          ])
                                       ]
                                   )
                               ]
@@ -1243,28 +1367,28 @@
                         : null,
                     t.activeGame
                         ? null
-                        : i('div', { classMap: { overlay: !0 }, key: 29 }, [
+                        : i('div', { classMap: { overlay: !0 }, key: 38 }, [
                               i(
                                   'div',
                                   {
                                       classMap: { 'overlay-content': !0 },
-                                      key: 28
+                                      key: 37
                                   },
                                   [
                                       m(
                                           'my-gamepanel',
                                           d,
                                           {
-                                              key: 27,
+                                              key: 36,
                                               on: {
                                                   joingame:
-                                                      h ||
-                                                      (a._m1 = r(
+                                                      v ||
+                                                      (a._m5 = r(
                                                           t.setReceiverId
                                                       )),
                                                   startgame:
-                                                      g ||
-                                                      (a._m2 = r(t.startGame))
+                                                      b ||
+                                                      (a._m6 = r(t.startGame))
                                               }
                                           },
                                           []
@@ -1275,14 +1399,14 @@
                 ])
             ];
         }
-        var p = Object(a.registerTemplate)(m);
+        var h = Object(a.registerTemplate)(m);
         (m.stylesheets = []),
             o && m.stylesheets.push.apply(m.stylesheets, o),
             (m.stylesheetTokens = {
                 hostAttribute: 'my-game-_game-host',
                 shadowAttribute: 'my-game-_game'
             });
-        var h = s(6);
+        var p = s(6);
         class g extends a.LightningElement {
             constructor(...e) {
                 super(...e),
@@ -1303,7 +1427,9 @@
                     (this.winningOrLose = !1),
                     (this.progress = 1),
                     (this.showProgress = !1),
-                    (this.socket = h.connect(
+                    (this.isRematch = !1),
+                    (this.isNoPlayer = !1),
+                    (this.socket = p.connect(
                         'https://tic-tac-toe-lwc-oss.herokuapp.com/'
                     ));
             }
@@ -1313,8 +1439,7 @@
             }
             connectedCallback() {
                 this.socket.on('joinned', (e) => {
-                    console.log(this.receiverGameId),
-                        console.log('under if'),
+                    console.log('under if'),
                         this.socket.emit('room id confirmation', {
                             joinned: !0,
                             playerName: this.senderPlayerName,
@@ -1364,15 +1489,52 @@
                                       '.slds-progress-bar__value'
                                   ).style = `width : ${this.progress}%`),
                                   this.setIntervalFunction());
+                    }),
+                    this.socket.on('rematch', (e) => {
+                        console.log('rematch'),
+                            this.winningOrLose
+                                ? 'rematch' === e && (this.isRematch = !0)
+                                : this.socket.emit('player not available', {
+                                      roomId: this.senderGameId
+                                  });
+                    }),
+                    this.socket.on('no player', (e) => {
+                        console.log('no player'),
+                            'noPlayer' === e && (this.isNoPlayer = !0);
                     });
             }
-            disconnectedCallback() {}
-            subscribeGameEvents() {
-                console.log(this.channelName);
+            startAgain() {
+                (this.winningOrLose = !1),
+                    (this.renderComplete = !1),
+                    this.activateGame(),
+                    console.log('Under start game'),
+                    console.log(this.senderGameId),
+                    (this.showOverLay = !0),
+                    this.socket.emit('start again', {
+                        roomId: this.senderGameId
+                    }),
+                    this.renderedCallback();
             }
-            joinGame(e) {
-                (this.receiverPlayerName = e.PlayerName__c),
-                    console.log(this.receiverPlayerName);
+            rematch() {
+                (this.isRematch = !1),
+                    (this.renderComplete = !1),
+                    (this.winningOrLose = !1),
+                    this.activateGame(),
+                    this.renderedCallback();
+            }
+            exitGame() {
+                (this.winningOrLose = !1),
+                    (this.renderComplete = !1),
+                    (this.winningOrLose = !1),
+                    (this.showOverLay = !1),
+                    (this.isNoPlayer = !1),
+                    this.isRematch &&
+                        this.socket.emit('player not available', {
+                            roomId: this.senderGameId
+                        }),
+                    this.renderedCallback(),
+                    (this.activeGame = !1),
+                    (this.isRematch = !1);
             }
             joinGameRoom(e, t) {
                 console.log(e),
@@ -1381,7 +1543,6 @@
                         playerName: t
                     });
             }
-            gameEvent() {}
             setReceiverId(e) {
                 this.joinGameRoom(
                     e.detail.receiverGameId,
@@ -1390,33 +1551,6 @@
                     (this.senderGameId = e.detail.receiverGameId),
                     (this.senderPlayerName = e.detail.senderPlayerName),
                     (this.selectedChannel = 'online');
-            }
-            triggerActions(e) {
-                switch (e.action__c) {
-                    case 'join confirmation':
-                        (this.senderGameId = e.SenderGameId__c),
-                            (this.receiverPlayerName = e.PlayerName__c),
-                            console.log(this.receiverPlayerName),
-                            console.log('startgame'),
-                            this.activateGame(),
-                            (this.showOverLay = !0);
-                        break;
-                    case 'receiver move':
-                        (this.showOverLay = !1),
-                            this.playMove(e.corditnate__c),
-                            this.checkForWinning(
-                                this.currentSymbol,
-                                e.corditnate__c
-                            )
-                                ? ((this.winningOrLoseMsg = 'You lose'),
-                                  (this.winningOrLose = !0))
-                                : ((this.showProgress = !0),
-                                  (this.progress = 1),
-                                  (this.template.querySelector(
-                                      '.slds-progress-bar__value'
-                                  ).style = `width : ${this.progress}%`),
-                                  this.setIntervalFunction());
-                }
             }
             activateGame() {
                 this.activeGame = !0;
@@ -1584,10 +1718,12 @@
                 'winningOrLose',
                 'progress',
                 'showProgress',
+                'isRematch',
+                'isNoPlayer',
                 'socket'
             ]
         });
-        var u = Object(a.registerComponent)(g, { tmpl: p });
+        var u = Object(a.registerComponent)(g, { tmpl: h });
         function y(e, t, s, a) {
             const { c: n } = e;
             return [n('my-game', u, { key: 0 }, [])];
@@ -1599,9 +1735,9 @@
                 hostAttribute: 'my-app-_app-host',
                 shadowAttribute: 'my-app-_app'
             });
-        class f extends a.LightningElement {
+        class b extends a.LightningElement {
             connectedCallback() {
-                const e = h.connect('http://localhost:3001/');
+                const e = p.connect('http://localhost:3001/');
                 e.on('connect', () => {
                     console.log('app connected'),
                         e.emit('message', { message: 'Hello server1' });
@@ -1611,8 +1747,8 @@
                     });
             }
         }
-        var b = Object(a.registerComponent)(f, { tmpl: v });
-        const k = Object(a.createElement)('my-app', { is: b });
+        var f = Object(a.registerComponent)(b, { tmpl: v });
+        const k = Object(a.createElement)('my-app', { is: f });
         document.querySelector('#main').appendChild(k);
     }
 });

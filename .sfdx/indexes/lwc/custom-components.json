@@ -1,0 +1,538 @@
+[
+    {
+        "_allAttributes": null,
+        "_properties": null,
+        "_methods": null,
+        "file": "e:/Socket.IO/tic-tac-toe/src/client/modules/my/app/app.js",
+        "metadata": {
+            "decorators": [],
+            "declarationLoc": {
+                "start": { "line": 4, "column": 0 },
+                "end": { "line": 16, "column": 1 }
+            },
+            "classMembers": [
+                {
+                    "type": "method",
+                    "name": "connectedCallback",
+                    "loc": {
+                        "start": { "line": 5, "column": 4 },
+                        "end": { "line": 15, "column": 5 }
+                    }
+                }
+            ],
+            "exports": [{ "type": "ExportDefaultDeclaration" }]
+        },
+        "updatedAt": "2020-09-30T10:31:47.563Z"
+    },
+    {
+        "_allAttributes": null,
+        "_properties": null,
+        "_methods": null,
+        "file": "e:/Socket.IO/tic-tac-toe/src/client/modules/my/game/game.js",
+        "metadata": {
+            "decorators": [
+                {
+                    "type": "track",
+                    "targets": [{ "name": "gameBlock", "type": "property" }]
+                }
+            ],
+            "declarationLoc": {
+                "start": { "line": 5, "column": 0 },
+                "end": { "line": 352, "column": 1 }
+            },
+            "classMembers": [
+                {
+                    "type": "property",
+                    "name": "gameBlock",
+                    "loc": {
+                        "start": { "line": 6, "column": 4 },
+                        "end": { "line": 6, "column": 26 }
+                    },
+                    "decorator": "track"
+                },
+                {
+                    "type": "property",
+                    "name": "renderComplete",
+                    "loc": {
+                        "start": { "line": 7, "column": 4 },
+                        "end": { "line": 7, "column": 27 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "activeGame",
+                    "loc": {
+                        "start": { "line": 8, "column": 4 },
+                        "end": { "line": 8, "column": 23 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "currentColor",
+                    "loc": {
+                        "start": { "line": 9, "column": 4 },
+                        "end": { "line": 9, "column": 27 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "currentSymbol",
+                    "loc": {
+                        "start": { "line": 10, "column": 4 },
+                        "end": { "line": 10, "column": 24 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "channelName",
+                    "loc": {
+                        "start": { "line": 11, "column": 4 },
+                        "end": { "line": 11, "column": 42 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "subscription",
+                    "loc": {
+                        "start": { "line": 12, "column": 4 },
+                        "end": { "line": 12, "column": 17 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "selectedChannel",
+                    "loc": {
+                        "start": { "line": 13, "column": 4 },
+                        "end": { "line": 13, "column": 20 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "receiverPlayerName",
+                    "loc": {
+                        "start": { "line": 14, "column": 4 },
+                        "end": { "line": 14, "column": 23 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "senderPlayerName",
+                    "loc": {
+                        "start": { "line": 15, "column": 4 },
+                        "end": { "line": 15, "column": 21 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "senderGameId",
+                    "loc": {
+                        "start": { "line": 16, "column": 4 },
+                        "end": { "line": 16, "column": 17 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "receiverGameId",
+                    "loc": {
+                        "start": { "line": 17, "column": 4 },
+                        "end": { "line": 17, "column": 19 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "showOverLay",
+                    "loc": {
+                        "start": { "line": 18, "column": 4 },
+                        "end": { "line": 18, "column": 24 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "winningOrLoseMsg",
+                    "loc": {
+                        "start": { "line": 19, "column": 4 },
+                        "end": { "line": 19, "column": 21 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "winningOrLose",
+                    "loc": {
+                        "start": { "line": 20, "column": 4 },
+                        "end": { "line": 20, "column": 26 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "progress",
+                    "loc": {
+                        "start": { "line": 21, "column": 4 },
+                        "end": { "line": 21, "column": 17 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "showProgress",
+                    "loc": {
+                        "start": { "line": 22, "column": 4 },
+                        "end": { "line": 22, "column": 25 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "isRematch",
+                    "loc": {
+                        "start": { "line": 23, "column": 4 },
+                        "end": { "line": 23, "column": 22 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "isNoPlayer",
+                    "loc": {
+                        "start": { "line": 24, "column": 4 },
+                        "end": { "line": 24, "column": 23 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "socket",
+                    "loc": {
+                        "start": { "line": 26, "column": 4 },
+                        "end": { "line": 26, "column": 76 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "renderedCallback",
+                    "loc": {
+                        "start": { "line": 28, "column": 4 },
+                        "end": { "line": 33, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "connectedCallback",
+                    "loc": {
+                        "start": { "line": 35, "column": 4 },
+                        "end": { "line": 114, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "startAgain",
+                    "loc": {
+                        "start": { "line": 116, "column": 4 },
+                        "end": { "line": 127, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "rematch",
+                    "loc": {
+                        "start": { "line": 129, "column": 4 },
+                        "end": { "line": 135, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "exitGame",
+                    "loc": {
+                        "start": { "line": 137, "column": 4 },
+                        "end": { "line": 143, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "joinGameRoom",
+                    "loc": {
+                        "start": { "line": 148, "column": 4 },
+                        "end": { "line": 154, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "setReceiverId",
+                    "loc": {
+                        "start": { "line": 156, "column": 4 },
+                        "end": { "line": 164, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "activateGame",
+                    "loc": {
+                        "start": { "line": 166, "column": 4 },
+                        "end": { "line": 168, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "setIntervalFunction",
+                    "loc": {
+                        "start": { "line": 171, "column": 4 },
+                        "end": { "line": 184, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "clearIntervalFun",
+                    "loc": {
+                        "start": { "line": 188, "column": 4 },
+                        "end": { "line": 202, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "setGameBlock",
+                    "loc": {
+                        "start": { "line": 205, "column": 4 },
+                        "end": { "line": 220, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "handleBlock",
+                    "loc": {
+                        "start": { "line": 223, "column": 4 },
+                        "end": { "line": 262, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "playMove",
+                    "loc": {
+                        "start": { "line": 264, "column": 4 },
+                        "end": { "line": 273, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "checkForWinning",
+                    "loc": {
+                        "start": { "line": 276, "column": 4 },
+                        "end": { "line": 324, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "getIndexByCordinate",
+                    "loc": {
+                        "start": { "line": 327, "column": 4 },
+                        "end": { "line": 333, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "createRoom",
+                    "loc": {
+                        "start": { "line": 335, "column": 4 },
+                        "end": { "line": 337, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "startGame",
+                    "loc": {
+                        "start": { "line": 340, "column": 4 },
+                        "end": { "line": 351, "column": 5 }
+                    }
+                }
+            ],
+            "exports": [{ "type": "ExportDefaultDeclaration" }]
+        },
+        "updatedAt": "2020-10-11T07:09:48.690Z"
+    },
+    {
+        "_allAttributes": null,
+        "_properties": null,
+        "_methods": null,
+        "file": "e:/Socket.IO/tic-tac-toe/src/client/modules/my/gamepanel/gamepanel.js",
+        "metadata": {
+            "decorators": [
+                {
+                    "type": "api",
+                    "targets": [
+                        {
+                            "type": "property",
+                            "name": "selectedChannel",
+                            "value": { "type": "unresolved" }
+                        },
+                        { "type": "method", "name": "waitForPlayer" }
+                    ]
+                }
+            ],
+            "declarationLoc": {
+                "start": { "line": 6, "column": 0 },
+                "end": { "line": 107, "column": 1 }
+            },
+            "classMembers": [
+                {
+                    "type": "property",
+                    "name": "selectedChannel",
+                    "loc": {
+                        "start": { "line": 7, "column": 4 },
+                        "end": { "line": 7, "column": 25 }
+                    },
+                    "decorator": "api",
+                    "value": { "type": "unresolved" }
+                },
+                {
+                    "type": "property",
+                    "name": "isNoActiveGame",
+                    "loc": {
+                        "start": { "line": 8, "column": 4 },
+                        "end": { "line": 8, "column": 26 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "isCreateGame",
+                    "loc": {
+                        "start": { "line": 9, "column": 4 },
+                        "end": { "line": 9, "column": 25 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "isJoinAGame",
+                    "loc": {
+                        "start": { "line": 10, "column": 4 },
+                        "end": { "line": 10, "column": 24 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "isWaitingForJoining",
+                    "loc": {
+                        "start": { "line": 11, "column": 4 },
+                        "end": { "line": 11, "column": 32 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "playerName",
+                    "loc": {
+                        "start": { "line": 12, "column": 4 },
+                        "end": { "line": 12, "column": 20 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "waitingMsg",
+                    "loc": {
+                        "start": { "line": 13, "column": 4 },
+                        "end": { "line": 13, "column": 20 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "gameId",
+                    "loc": {
+                        "start": { "line": 14, "column": 4 },
+                        "end": { "line": 14, "column": 16 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "offLine",
+                    "loc": {
+                        "start": { "line": 15, "column": 4 },
+                        "end": { "line": 15, "column": 20 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "opponentName",
+                    "loc": {
+                        "start": { "line": 16, "column": 4 },
+                        "end": { "line": 16, "column": 22 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "createGame",
+                    "loc": {
+                        "start": { "line": 19, "column": 4 },
+                        "end": { "line": 24, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "joinAGame",
+                    "loc": {
+                        "start": { "line": 27, "column": 4 },
+                        "end": { "line": 31, "column": 5 }
+                    }
+                },
+                {
+                    "type": "property",
+                    "name": "channelOptions",
+                    "loc": {
+                        "start": { "line": 33, "column": 4 },
+                        "end": { "line": 38, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "handleChannelOnchange",
+                    "loc": {
+                        "start": { "line": 41, "column": 4 },
+                        "end": { "line": 46, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "handleKeyUp",
+                    "loc": {
+                        "start": { "line": 48, "column": 4 },
+                        "end": { "line": 50, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "handlePlayerName",
+                    "loc": {
+                        "start": { "line": 52, "column": 4 },
+                        "end": { "line": 54, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "handleOpponentName",
+                    "loc": {
+                        "start": { "line": 56, "column": 4 },
+                        "end": { "line": 58, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "startGame",
+                    "loc": {
+                        "start": { "line": 61, "column": 4 },
+                        "end": { "line": 81, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "waitForPlayer",
+                    "loc": {
+                        "start": { "line": 84, "column": 4 },
+                        "end": { "line": 90, "column": 5 }
+                    },
+                    "decorator": "api"
+                },
+                {
+                    "type": "method",
+                    "name": "joinGame",
+                    "loc": {
+                        "start": { "line": 94, "column": 4 },
+                        "end": { "line": 106, "column": 5 }
+                    }
+                }
+            ],
+            "exports": [{ "type": "ExportDefaultDeclaration" }]
+        },
+        "updatedAt": "2020-10-07T15:27:50.123Z"
+    }
+]

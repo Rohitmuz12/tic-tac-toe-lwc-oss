@@ -2,9 +2,6 @@
 import { LightningElement, track } from 'lwc';
 import * as socketIo from 'socket.io-client';
 
-// import publishJoinConfirmationFromApex from '@salesforce/apex/PublishTicTacToeGameEvent.sendJoinConfirmation';
-// import playMoveForReciver from '@salesforce/apex/PublishTicTacToeGameEvent.playMove';
-
 export default class Game extends LightningElement {
     @track gameBlock = [];
     renderComplete = false;
@@ -23,8 +20,11 @@ export default class Game extends LightningElement {
     winningOrLose = false;
     progress = 1;
     showProgress = false;
-    // socket = socketIo.connect('http://localhost:3001/');
+    isRematch = false;
+    isNoPlayer = false;
+
     socket = socketIo.connect('https://tic-tac-toe-lwc-oss.herokuapp.com/');
+    // socket = socketIo.connect('http://localhost:443/');
 
     renderedCallback() {
         if (!this.renderComplete) {
@@ -36,7 +36,6 @@ export default class Game extends LightningElement {
     connectedCallback() {
         //From opp to player
         this.socket.on('joinned', (data) => {
-            console.log(this.receiverGameId);
             console.log('under if');
             this.socket.emit('room id confirmation', {
                 joinned: true,
@@ -93,58 +92,63 @@ export default class Game extends LightningElement {
                 this.setIntervalFunction();
             }
         });
+
+        this.socket.on('rematch', (data) => {
+            console.log('rematch');
+            if (this.winningOrLose) {
+                if (data === 'rematch') {
+                    this.isRematch = true;
+                }
+            } else {
+                this.socket.emit('player not available', {
+                    roomId: this.senderGameId
+                });
+            }
+        });
+
+        this.socket.on('no player', (data) => {
+            console.log('no player');
+            if (data === 'noPlayer') {
+                this.isNoPlayer = true;
+            }
+        });
     }
 
-    disconnectedCallback() {
-        // unsubscribe(this.subscription, respose => {
-        //     console.log(response);
-        // })
+    startAgain() {
+        this.winningOrLose = false;
+        this.renderComplete = false;
+        this.activateGame();
+        console.log('Under start game');
+        console.log(this.senderGameId);
+        this.showOverLay = true;
+        this.socket.emit('start again', {
+            roomId: this.senderGameId
+        });
+        this.renderedCallback();
     }
 
-    //Subscribe event when we use online option
-    subscribeGameEvents() {
-        // const messageCallback = (response) => {
-        //     console.log('New message received: ', JSON.stringify(response));
-        //     const payloadString = JSON.stringify(response);
-        //     const payload = JSON.parse(payloadString).data.payload;
-        //     console.log(payload);
-        //     if(payload.Game_Id__c === this.receiverGameId){
-        //         this.triggerActions(payload);
-        //     }else if(payload.action__c === 'join game'){
-        //         console.log(this.senderGameId)
-        //         if(payload.Game_Id__c === this.senderGameId){
-        //             if(this.receiverGameId === undefined || this.receiverGameId === '')
-        //                 this.joinGame(payload);
-        //         }
-        //     }
-        // };
-
-        console.log(this.channelName);
-
-        // subscribe(this.channelName,-1,messageCallback)
-        // .then(response => {
-        //     console.log(response);
-        //     this.subscription = response;
-        // });
+    rematch() {
+        this.isRematch = false;
+        this.renderComplete = false;
+        this.winningOrLose = false;
+        this.activateGame();
+        this.renderedCallback();
     }
 
-    //Create random game id
-    //send join confirmation by creator of game using platform event
-    joinGame(payload) {
-        this.receiverPlayerName = payload.PlayerName__c;
-        console.log(this.receiverPlayerName);
-        //send join confrimation
-        // publishJoinConfirmationFromApex({receiverGameId : this.senderGameId,senderGameId : this.receiverGameId, playerName : this.senderPlayerName})
-        // .then(data => {
-        //     console.log(data);
-        //     this.activateGame();
-        //     this.showProgress = true;
-        //     this.progress = 1;
-        //     this.setIntervalFunction();
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        // })
+    exitGame() {
+        this.winningOrLose = false;
+        this.renderComplete = false;
+        this.winningOrLose = false;
+        this.showOverLay = false;
+        this.isNoPlayer = false;
+        if (this.isRematch) {
+            this.socket.emit('player not available', {
+                roomId: this.senderGameId
+            });
+        }
+        this.renderedCallback();
+        this.activeGame = false;
+        this.isRematch = false;
     }
 
     //Set receiverId amd own player name. Called from child component.
@@ -158,8 +162,6 @@ export default class Game extends LightningElement {
         });
     }
 
-    gameEvent() {}
-
     setReceiverId(event) {
         this.joinGameRoom(
             event.detail.receiverGameId,
@@ -168,42 +170,6 @@ export default class Game extends LightningElement {
         this.senderGameId = event.detail.receiverGameId;
         this.senderPlayerName = event.detail.senderPlayerName;
         this.selectedChannel = 'online';
-    }
-
-    //Trigger action that comes from platform event
-    triggerActions(payload) {
-        switch (payload.action__c) {
-            case 'join confirmation':
-                this.senderGameId = payload.SenderGameId__c;
-                this.receiverPlayerName = payload.PlayerName__c;
-                console.log(this.receiverPlayerName);
-                console.log('startgame');
-                this.activateGame();
-                this.showOverLay = true;
-                break;
-            case 'receiver move':
-                this.showOverLay = false;
-                this.playMove(payload.corditnate__c);
-                if (
-                    this.checkForWinning(
-                        this.currentSymbol,
-                        payload.corditnate__c
-                    )
-                ) {
-                    this.winningOrLoseMsg = 'You lose';
-                    this.winningOrLose = true;
-                } else {
-                    this.showProgress = true;
-                    this.progress = 1;
-                    this.template.querySelector(
-                        '.slds-progress-bar__value'
-                    ).style = `width : ${this.progress}%`;
-                    this.setIntervalFunction();
-                }
-                break;
-            default:
-                break;
-        }
     }
 
     activateGame() {
@@ -280,13 +246,6 @@ export default class Game extends LightningElement {
                 cordinate: targetId,
                 roomId: this.senderGameId
             });
-            // playMoveForReciver({cordinate : targetId,senderId : this.senderGameId})
-            // .then(data => {
-            //     console.log(data);
-            // })
-            // .catch(error => {
-            //     console.log(error);
-            // })
         }
         if (!win) {
             if (this.selectedChannel === 'online') this.showOverLay = true;
