@@ -146,7 +146,7 @@
                     t,
                     '{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.9);z-index:2}.overlay-content',
                     t,
-                    '{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}.overlayToStop',
+                    '{position:absolute;top:50%;left:47%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}.overlayToStop',
                     t,
                     '{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(158,142,121,.4);z-index:2}.custom-loading-text',
                     t,
@@ -194,51 +194,68 @@
                             'slds-m-top_small': !0,
                             'slds-m-bottom_medium': !0
                         },
-                        key: 45
+                        key: 46
                     },
                     [
                         t.isNoActiveGame
-                            ? l('div', { key: 2 }, [
+                            ? l('div', { key: 3 }, [
                                   l(
-                                      'button',
+                                      'div',
                                       {
                                           classMap: {
-                                              'slds-button': !0,
-                                              'slds-button_brand': !0,
-                                              'slds-m-left_x-small': !0
+                                              'slds-align_absolute-center': !0
                                           },
-                                          attrs: {
-                                              variant: 'brand',
-                                              label: 'Create game'
-                                          },
-                                          key: 0,
-                                          on: {
-                                              click:
-                                                  c || (a._m0 = i(t.createGame))
-                                          }
+                                          key: 2
                                       },
-                                      [n('Create game')]
-                                  ),
-                                  l(
-                                      'button',
-                                      {
-                                          classMap: {
-                                              'slds-button': !0,
-                                              'slds-button_brand': !0,
-                                              'slds-m-left_x-small': !0
-                                          },
-                                          key: 1,
-                                          on: {
-                                              click:
-                                                  d || (a._m1 = i(t.joinAGame))
-                                          }
-                                      },
-                                      [n('Join game')]
+                                      [
+                                          l(
+                                              'button',
+                                              {
+                                                  classMap: {
+                                                      'slds-button': !0,
+                                                      'slds-button_brand': !0,
+                                                      'slds-m-left_x-small': !0
+                                                  },
+                                                  attrs: {
+                                                      variant: 'brand',
+                                                      label: 'Create game'
+                                                  },
+                                                  key: 0,
+                                                  on: {
+                                                      click:
+                                                          c ||
+                                                          (a._m0 = i(
+                                                              t.createGame
+                                                          ))
+                                                  }
+                                              },
+                                              [n('Create game')]
+                                          ),
+                                          l(
+                                              'button',
+                                              {
+                                                  classMap: {
+                                                      'slds-button': !0,
+                                                      'slds-button_brand': !0,
+                                                      'slds-m-left_x-small': !0
+                                                  },
+                                                  key: 1,
+                                                  on: {
+                                                      click:
+                                                          d ||
+                                                          (a._m1 = i(
+                                                              t.joinAGame
+                                                          ))
+                                                  }
+                                              },
+                                              [n('Join game')]
+                                          )
+                                      ]
                                   )
                               ])
                             : null,
                         t.isCreateGame
-                            ? l('div', { key: 27 }, [
+                            ? l('div', { key: 28 }, [
                                   l(
                                       'radiogroup',
                                       {
@@ -252,7 +269,7 @@
                                               value: t.value,
                                               type: 'radio'
                                           },
-                                          key: 3,
+                                          key: 4,
                                           on: {
                                               change:
                                                   m ||
@@ -270,7 +287,7 @@
                                               'slds-form-element': !0,
                                               'slds-var-m-bottom_medium': !0
                                           },
-                                          key: 16
+                                          key: 17
                                       },
                                       [
                                           l(
@@ -280,7 +297,7 @@
                                                       'slds-form-element__legend': !0,
                                                       'slds-form-element__label': !0
                                                   },
-                                                  key: 4
+                                                  key: 5
                                               },
                                               [n('Choose game type')]
                                           ),
@@ -290,7 +307,7 @@
                                                   classMap: {
                                                       'slds-form-element__control': !0
                                                   },
-                                                  key: 15
+                                                  key: 16
                                               },
                                               [
                                                   l(
@@ -299,7 +316,7 @@
                                                           classMap: {
                                                               'slds-radio': !0
                                                           },
-                                                          key: 9
+                                                          key: 10
                                                       },
                                                       [
                                                           l(
@@ -318,7 +335,7 @@
                                                                       value:
                                                                           'online'
                                                                   },
-                                                                  key: 5,
+                                                                  key: 6,
                                                                   on: {
                                                                       change:
                                                                           h ||
@@ -342,7 +359,7 @@
                                                                               'radio-43'
                                                                           )
                                                                   },
-                                                                  key: 8
+                                                                  key: 9
                                                               },
                                                               [
                                                                   l(
@@ -351,7 +368,7 @@
                                                                           classMap: {
                                                                               'slds-radio_faux': !0
                                                                           },
-                                                                          key: 6
+                                                                          key: 7
                                                                       },
                                                                       []
                                                                   ),
@@ -361,7 +378,7 @@
                                                                           classMap: {
                                                                               'slds-form-element__label': !0
                                                                           },
-                                                                          key: 7
+                                                                          key: 8
                                                                       },
                                                                       [
                                                                           n(
@@ -379,7 +396,7 @@
                                                           classMap: {
                                                               'slds-radio': !0
                                                           },
-                                                          key: 14
+                                                          key: 15
                                                       },
                                                       [
                                                           l(
@@ -398,7 +415,7 @@
                                                                       value:
                                                                           'offline'
                                                                   },
-                                                                  key: 10,
+                                                                  key: 11,
                                                                   on: {
                                                                       change:
                                                                           p ||
@@ -422,7 +439,7 @@
                                                                               'radio-44'
                                                                           )
                                                                   },
-                                                                  key: 13
+                                                                  key: 14
                                                               },
                                                               [
                                                                   l(
@@ -431,7 +448,7 @@
                                                                           classMap: {
                                                                               'slds-radio_faux': !0
                                                                           },
-                                                                          key: 11
+                                                                          key: 12
                                                                       },
                                                                       []
                                                                   ),
@@ -441,7 +458,7 @@
                                                                           classMap: {
                                                                               'slds-form-element__label': !0
                                                                           },
-                                                                          key: 12
+                                                                          key: 13
                                                                       },
                                                                       [
                                                                           n(
@@ -461,7 +478,7 @@
                                       'div',
                                       {
                                           classMap: { 'slds-form-element': !0 },
-                                          key: 20
+                                          key: 21
                                       },
                                       [
                                           l(
@@ -475,7 +492,7 @@
                                                           '' +
                                                           o('text-input-id-1')
                                                   },
-                                                  key: 17
+                                                  key: 18
                                               },
                                               [n('Your name')]
                                           ),
@@ -485,7 +502,7 @@
                                                   classMap: {
                                                       'slds-form-element__control': !0
                                                   },
-                                                  key: 19
+                                                  key: 20
                                               },
                                               [
                                                   l(
@@ -501,7 +518,7 @@
                                                                   'text-input-id-1'
                                                               )
                                                           },
-                                                          key: 18,
+                                                          key: 19,
                                                           on: {
                                                               keyup:
                                                                   g ||
@@ -528,7 +545,7 @@
                                                 classMap: {
                                                     'slds-form-element': !0
                                                 },
-                                                key: 25
+                                                key: 26
                                             },
                                             [
                                                 l(
@@ -544,7 +561,7 @@
                                                                     'text-input-id-2'
                                                                 )
                                                         },
-                                                        key: 22
+                                                        key: 23
                                                     },
                                                     [
                                                         l(
@@ -557,7 +574,7 @@
                                                                     title:
                                                                         'required'
                                                                 },
-                                                                key: 21
+                                                                key: 22
                                                             },
                                                             [n('* ')]
                                                         ),
@@ -570,7 +587,7 @@
                                                         classMap: {
                                                             'slds-form-element__control': !0
                                                         },
-                                                        key: 24
+                                                        key: 25
                                                     },
                                                     [
                                                         l(
@@ -587,7 +604,7 @@
                                                                         'text-input-id-2'
                                                                     )
                                                                 },
-                                                                key: 23,
+                                                                key: 24,
                                                                 on: {
                                                                     keyup:
                                                                         y ||
@@ -616,7 +633,7 @@
                                               'slds-button_brand': !0,
                                               'slds-var-m-top_medium': !0
                                           },
-                                          key: 26,
+                                          key: 27,
                                           on: {
                                               click:
                                                   b || (a._m9 = i(t.startGame))
@@ -627,12 +644,12 @@
                               ])
                             : null,
                         t.isJoinAGame
-                            ? l('div', { key: 37 }, [
+                            ? l('div', { key: 38 }, [
                                   l(
                                       'div',
                                       {
                                           classMap: { 'slds-form-element': !0 },
-                                          key: 31
+                                          key: 32
                                       },
                                       [
                                           l(
@@ -646,7 +663,7 @@
                                                           '' +
                                                           o('text-input-id-1')
                                                   },
-                                                  key: 28
+                                                  key: 29
                                               },
                                               [n('Input game Id')]
                                           ),
@@ -656,7 +673,7 @@
                                                   classMap: {
                                                       'slds-form-element__control': !0
                                                   },
-                                                  key: 30
+                                                  key: 31
                                               },
                                               [
                                                   l(
@@ -672,7 +689,7 @@
                                                                   'text-input-id-3'
                                                               )
                                                           },
-                                                          key: 29,
+                                                          key: 30,
                                                           on: {
                                                               keyup:
                                                                   k ||
@@ -696,7 +713,7 @@
                                       'div',
                                       {
                                           classMap: { 'slds-form-element': !0 },
-                                          key: 35
+                                          key: 36
                                       },
                                       [
                                           l(
@@ -710,7 +727,7 @@
                                                           '' +
                                                           o('text-input-id-1')
                                                   },
-                                                  key: 32
+                                                  key: 33
                                               },
                                               [n('Your name')]
                                           ),
@@ -720,7 +737,7 @@
                                                   classMap: {
                                                       'slds-form-element__control': !0
                                                   },
-                                                  key: 34
+                                                  key: 35
                                               },
                                               [
                                                   l(
@@ -736,7 +753,7 @@
                                                                   'text-input-id-4'
                                                               )
                                                           },
-                                                          key: 33,
+                                                          key: 34,
                                                           on: {
                                                               keyup:
                                                                   _ ||
@@ -764,7 +781,7 @@
                                               'slds-button_brand': !0,
                                               'slds-var-m-top_medium': !0
                                           },
-                                          key: 36,
+                                          key: 37,
                                           on: {
                                               click:
                                                   w || (a._m14 = i(t.joinGame))
@@ -775,14 +792,14 @@
                               ])
                             : null,
                         t.isWaitingForJoining
-                            ? l('div', { key: 44 }, [
+                            ? l('div', { key: 45 }, [
                                   l(
                                       'div',
                                       {
                                           classMap: {
                                               'slds-spinner_container': !0
                                           },
-                                          key: 43
+                                          key: 44
                                       },
                                       [
                                           l(
@@ -794,7 +811,7 @@
                                                       'slds-spinner_brand': !0
                                                   },
                                                   attrs: { role: 'status' },
-                                                  key: 42
+                                                  key: 43
                                               },
                                               [
                                                   l(
@@ -803,7 +820,7 @@
                                                           classMap: {
                                                               'slds-assistive-text': !0
                                                           },
-                                                          key: 38
+                                                          key: 39
                                                       },
                                                       [n('Loading')]
                                                   ),
@@ -813,7 +830,7 @@
                                                           classMap: {
                                                               'slds-spinner__dot-a': !0
                                                           },
-                                                          key: 39
+                                                          key: 40
                                                       },
                                                       []
                                                   ),
@@ -823,7 +840,7 @@
                                                           classMap: {
                                                               'slds-spinner__dot-b': !0
                                                           },
-                                                          key: 40
+                                                          key: 41
                                                       },
                                                       []
                                                   ),
@@ -833,7 +850,7 @@
                                                           classMap: {
                                                               'custom-loading-text': !0
                                                           },
-                                                          key: 41
+                                                          key: 42
                                                       },
                                                       [r(t.waitingMsg)]
                                                   )
@@ -1512,10 +1529,11 @@
                     this.activateGame(),
                     console.log('Under start game'),
                     console.log(this.senderGameId),
-                    (this.showOverLay = !0),
-                    this.socket.emit('start again', {
-                        roomId: this.senderGameId
-                    }),
+                    'Online' === this.selectedChannel &&
+                        ((this.showOverLay = !0),
+                        this.socket.emit('start again', {
+                            roomId: this.senderGameId
+                        })),
                     this.renderedCallback();
             }
             rematch() {
@@ -1535,6 +1553,8 @@
                         this.socket.emit('player not available', {
                             roomId: this.senderGameId
                         }),
+                    (this.senderPlayerName = ''),
+                    (this.receiverPlayerName = ''),
                     this.renderedCallback(),
                     (this.activeGame = !1),
                     (this.isRematch = !1);

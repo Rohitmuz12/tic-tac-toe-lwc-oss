@@ -24,7 +24,6 @@ export default class Game extends LightningElement {
     isNoPlayer = false;
 
     socket = socketIo.connect('https://tic-tac-toe-lwc-oss.herokuapp.com/');
-    // socket = socketIo.connect('http://localhost:443/');
 
     renderedCallback() {
         if (!this.renderComplete) {
@@ -123,10 +122,12 @@ export default class Game extends LightningElement {
         this.activateGame();
         console.log('Under start game');
         console.log(this.senderGameId);
-        this.showOverLay = true;
-        this.socket.emit('start again', {
-            roomId: this.senderGameId
-        });
+        if (this.selectedChannel === 'Online') {
+            this.showOverLay = true;
+            this.socket.emit('start again', {
+                roomId: this.senderGameId
+            });
+        }
         this.renderedCallback();
     }
 
@@ -149,6 +150,8 @@ export default class Game extends LightningElement {
                 roomId: this.senderGameId
             });
         }
+        this.senderPlayerName = '';
+        this.receiverPlayerName = '';
         this.renderedCallback();
         this.activeGame = false;
         this.isRematch = false;

@@ -1,20 +1,22 @@
 <template>
     <div class="slds-m-top_small slds-m-bottom_medium">
         <div if:true={isNoActiveGame}>
-            <button
-                variant="brand"
-                label="Create game"
-                onclick={createGame}
-                class="slds-button slds-button_brand slds-m-left_x-small"
-            >
-                Create game
-            </button>
-            <button
-                class="slds-button slds-button_brand slds-m-left_x-small"
-                onclick={joinAGame}
-            >
-                Join game
-            </button>
+            <div class="slds-align_absolute-center">
+                <button
+                    variant="brand"
+                    label="Create game"
+                    onclick={createGame}
+                    class="slds-button slds-button_brand slds-m-left_x-small"
+                >
+                    Create game
+                </button>
+                <button
+                    class="slds-button slds-button_brand slds-m-left_x-small"
+                    onclick={joinAGame}
+                >
+                    Join game
+                </button>
+            </div>
         </div>
         <div if:true={isCreateGame}>
             <radioGroup

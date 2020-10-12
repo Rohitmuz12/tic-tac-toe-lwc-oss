@@ -38,7 +38,7 @@
             ],
             "declarationLoc": {
                 "start": { "line": 5, "column": 0 },
-                "end": { "line": 352, "column": 1 }
+                "end": { "line": 376, "column": 1 }
             },
             "classMembers": [
                 {
@@ -215,133 +215,141 @@
                     "name": "connectedCallback",
                     "loc": {
                         "start": { "line": 35, "column": 4 },
-                        "end": { "line": 114, "column": 5 }
+                        "end": { "line": 117, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "startAgain",
                     "loc": {
-                        "start": { "line": 116, "column": 4 },
-                        "end": { "line": 127, "column": 5 }
+                        "start": { "line": 119, "column": 4 },
+                        "end": { "line": 132, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "rematch",
                     "loc": {
-                        "start": { "line": 129, "column": 4 },
-                        "end": { "line": 135, "column": 5 }
+                        "start": { "line": 134, "column": 4 },
+                        "end": { "line": 140, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "exitGame",
                     "loc": {
-                        "start": { "line": 137, "column": 4 },
-                        "end": { "line": 143, "column": 5 }
+                        "start": { "line": 142, "column": 4 },
+                        "end": { "line": 156, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "joinGameRoom",
                     "loc": {
-                        "start": { "line": 148, "column": 4 },
-                        "end": { "line": 154, "column": 5 }
+                        "start": { "line": 161, "column": 4 },
+                        "end": { "line": 167, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "setReceiverId",
                     "loc": {
-                        "start": { "line": 156, "column": 4 },
-                        "end": { "line": 164, "column": 5 }
+                        "start": { "line": 169, "column": 4 },
+                        "end": { "line": 177, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "activateGame",
                     "loc": {
-                        "start": { "line": 166, "column": 4 },
-                        "end": { "line": 168, "column": 5 }
+                        "start": { "line": 179, "column": 4 },
+                        "end": { "line": 181, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "setIntervalFunction",
                     "loc": {
-                        "start": { "line": 171, "column": 4 },
-                        "end": { "line": 184, "column": 5 }
+                        "start": { "line": 184, "column": 4 },
+                        "end": { "line": 197, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "clearIntervalFun",
                     "loc": {
-                        "start": { "line": 188, "column": 4 },
-                        "end": { "line": 202, "column": 5 }
+                        "start": { "line": 201, "column": 4 },
+                        "end": { "line": 215, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "setGameBlock",
                     "loc": {
-                        "start": { "line": 205, "column": 4 },
-                        "end": { "line": 220, "column": 5 }
+                        "start": { "line": 218, "column": 4 },
+                        "end": { "line": 233, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "handleBlock",
                     "loc": {
-                        "start": { "line": 223, "column": 4 },
-                        "end": { "line": 262, "column": 5 }
+                        "start": { "line": 236, "column": 4 },
+                        "end": { "line": 276, "column": 5 }
+                    }
+                },
+                {
+                    "type": "method",
+                    "name": "isGridFull",
+                    "loc": {
+                        "start": { "line": 278, "column": 4 },
+                        "end": { "line": 286, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "playMove",
                     "loc": {
-                        "start": { "line": 264, "column": 4 },
-                        "end": { "line": 273, "column": 5 }
+                        "start": { "line": 288, "column": 4 },
+                        "end": { "line": 297, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "checkForWinning",
                     "loc": {
-                        "start": { "line": 276, "column": 4 },
-                        "end": { "line": 324, "column": 5 }
+                        "start": { "line": 300, "column": 4 },
+                        "end": { "line": 348, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "getIndexByCordinate",
                     "loc": {
-                        "start": { "line": 327, "column": 4 },
-                        "end": { "line": 333, "column": 5 }
+                        "start": { "line": 351, "column": 4 },
+                        "end": { "line": 357, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "createRoom",
                     "loc": {
-                        "start": { "line": 335, "column": 4 },
-                        "end": { "line": 337, "column": 5 }
+                        "start": { "line": 359, "column": 4 },
+                        "end": { "line": 361, "column": 5 }
                     }
                 },
                 {
                     "type": "method",
                     "name": "startGame",
                     "loc": {
-                        "start": { "line": 340, "column": 4 },
-                        "end": { "line": 351, "column": 5 }
+                        "start": { "line": 364, "column": 4 },
+                        "end": { "line": 375, "column": 5 }
                     }
                 }
             ],
             "exports": [{ "type": "ExportDefaultDeclaration" }]
         },
-        "updatedAt": "2020-10-11T07:09:48.690Z"
+        "updatedAt": "2020-10-12T12:48:53.922Z"
     },
     {
         "_allAttributes": null,
