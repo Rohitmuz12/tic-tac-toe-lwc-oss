@@ -122,7 +122,7 @@ export default class Game extends LightningElement {
         this.activateGame();
         console.log('Under start game');
         console.log(this.senderGameId);
-        if (this.selectedChannel === 'Online') {
+        if (this.selectedChannel === 'online') {
             this.showOverLay = true;
             this.socket.emit('start again', {
                 roomId: this.senderGameId
