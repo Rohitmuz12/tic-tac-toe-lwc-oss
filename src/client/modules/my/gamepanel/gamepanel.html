@@ -147,7 +147,7 @@
             </button>
         </div>
         <div if:true={isWaitingForJoining}>
-            <div class="slds-spinner_container">
+            <div class="slds-spinner_container" style="background-color:transparent">
                 <div
                     role="status"
                     class="slds-spinner slds-spinner_medium slds-spinner_brand"
@@ -158,6 +158,9 @@
                     <div class="custom-loading-text">{waitingMsg}</div>
                 </div>
             </div>
+            <button onclick={shareGameId} class="slds-button slds-button_brand slds-m-left_x-small" style="margin-top:22rem;">
+                Share Code from whatsapp
+            </button>
         </div>
     </div>
 </template>

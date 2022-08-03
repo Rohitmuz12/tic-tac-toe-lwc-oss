@@ -14,6 +14,7 @@ export default class Gamepanel extends LightningElement {
     gameId = '';
     offLine = false;
     opponentName = '';
+    sharableGameId;
 
     //Show panel for create game
     createGame() {
@@ -84,9 +85,15 @@ export default class Gamepanel extends LightningElement {
     @api waitForPlayer(gameId) {
         this.waitingMsg =
             'Your game id: ' + gameId + '\n Please wait for your teammate!';
+        this.sharableGameId = gameId;
         this.isWaitingForJoining = true;
         this.isCreateGame = false;
         this.isJoinAGame = false;
+    }
+
+    shareGameId(){
+        var url= 'https://wa.me/?text=Please you the below game Id to join \n'+this.sharableGameId;
+        window.open(url, '_blank');
     }
 
     //After click on join button with game id and name.
