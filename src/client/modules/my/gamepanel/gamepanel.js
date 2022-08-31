@@ -93,7 +93,7 @@ export default class Gamepanel extends LightningElement {
 
     shareGameId(){
         console.log(this.sharableGameId);
-        var url= 'https://wa.me/?text=Please use the below game Id to connect with your opponent #'+this.sharableGameId + '</a>';
+        var url= 'https://wa.me/?text=Please use the below game Id to connect with your opponent #'+this.sharableGameId;
         window.open(url, '_blank');
     }
 
