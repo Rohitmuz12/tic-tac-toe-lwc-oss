@@ -23,7 +23,7 @@ export default class Game extends LightningElement {
     isRematch = false;
     isNoPlayer = false;
 
-    socket = socketIo.connect('https://tic-tac-toe-lwc-oss.herokuapp.com/');
+    socket = socketIo.connect('https://tic-tac-toe-lwc-oss.onrender.com/');
 
     renderedCallback() {
         if (!this.renderComplete) {
